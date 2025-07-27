@@ -7,41 +7,45 @@
   <style>
     body {
       margin: 0;
-      font-family: 'Arial', sans-serif;
+      font-family: 'Georgia', serif;
       background-color: #000;
-      color: #fff;
+      color: white;
+    }
+
+    .container {
+      display: flex;
+      min-height: 100vh;
     }
 
     .sidebar {
       background-color: #111;
       color: gold;
       padding: 20px;
-      width: 220px;
-      position: fixed;
-      height: 100%;
-      overflow-y: auto;
-      display: flex;
-      flex-direction: column;
+      min-width: 220px;
+      flex-shrink: 0;
     }
 
     .sidebar h1 {
-      margin: 0 0 5px;
-      font-size: 20px;
+      font-size: 18px;
+      margin: 0;
+      font-weight: bold;
       text-align: center;
     }
 
     .sidebar h2 {
-      margin: 0 0 20px;
-      font-size: 28px;
+      font-size: 24px;
+      margin-top: 5px;
       text-align: center;
     }
 
     .sidebar a {
-      color: #ddd;
-      text-decoration: none;
-      margin: 10px 0;
       display: block;
+      margin: 15px 0;
+      color: white;
+      text-decoration: none;
       font-size: 16px;
+      padding-left: 8px;
+      transition: 0.3s;
     }
 
     .sidebar a:hover {
@@ -49,136 +53,144 @@
     }
 
     .main {
-      margin-left: 220px;
+      flex: 1;
       padding: 20px;
     }
 
-    .main h1 {
-      color: gold;
-      text-shadow: 0 0 10px gold;
-      font-size: 36px;
-      margin-bottom: 10px;
-    }
-
-    .main h2 {
-      font-size: 20px;
+    .header {
+      text-align: center;
       margin-bottom: 20px;
     }
 
+    .header h1 {
+      font-size: 36px;
+      color: gold;
+      text-shadow: 0 0 10px gold;
+      margin: 0;
+    }
+
+    .header p {
+      font-size: 16px;
+      color: #ccc;
+    }
+
+    .banner {
+      text-align: center;
+      margin: 30px 0;
+    }
+
     .banner img {
-      width: 100%;
-      max-height: 300px;
-      object-fit: cover;
-      border: 3px solid gold;
-      margin-bottom: 30px;
+      max-width: 100%;
+      border: 4px solid gold;
+      border-radius: 10px;
     }
 
     .gallery {
-      display: flex;
-      flex-wrap: wrap;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
       gap: 20px;
-      justify-content: center;
     }
 
     .gallery img {
-      width: 300px;
-      height: 300px;
-      object-fit: cover;
+      width: 100%;
+      border: 3px solid gold;
+      border-radius: 8px;
+    }
+
+    .buy-popup {
+      display: none;
+      position: fixed;
+      top: 30%;
+      left: 50%;
+      transform: translate(-50%, -30%);
+      background-color: #111;
+      color: white;
+      padding: 30px;
       border: 3px solid gold;
       border-radius: 10px;
-      transition: transform 0.3s ease;
-    }
-
-    .gallery img:hover {
-      transform: scale(1.05);
-    }
-
-    .buttons {
-      margin: 30px 0;
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-    }
-
-    .buttons a {
+      z-index: 1000;
       text-align: center;
-      background-color: gold;
+    }
+
+    .buy-popup button {
+      margin-top: 15px;
+      background: gold;
       color: black;
-      padding: 15px;
-      font-weight: bold;
-      text-decoration: none;
-      border-radius: 10px;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
     }
 
     @media (max-width: 768px) {
-      .sidebar {
-        position: relative;
-        width: 100%;
-        height: auto;
-        flex-direction: row;
-        justify-content: space-around;
-        flex-wrap: wrap;
+      .container {
+        flex-direction: column;
       }
 
-      .sidebar h1,
-      .sidebar h2 {
-        width: 100%;
+      .sidebar {
+        min-width: 100%;
         text-align: center;
       }
 
-      .main {
-        margin-left: 0;
-        padding: 15px;
-      }
-
-      .gallery img {
-        width: 100%;
-        max-width: 100%;
-        height: auto;
-      }
-
-      .banner img {
-        max-height: none;
+      .sidebar a {
+        display: inline-block;
+        margin: 10px;
       }
     }
   </style>
 </head>
 <body>
+
+<div class="container">
   <div class="sidebar">
     <h1>Pepe Political Party</h1>
     <h2>$PPP</h2>
-    <a href="index.html">🏛 Home</a>
+    <a href="index.html">🏛️ Home</a>
     <a href="president.html">👑 President Pepe</a>
-    <a href="vicepresident.html">🧢 VP Vibeshift</a>
+    <a href="vicepresident.html">🔱 VP Vibeshift</a>
     <a href="firstlady.html">💃 First Lady Binnmaggot</a>
-    <a href="#">🛒 Buy Now</a>
-    <a href="#">⏳ Coming Soon</a>
+    <a href="#" onclick="showPopup()">🛒 Buy Now</a>
   </div>
 
   <div class="main">
-    <h1>Pepe Political Party</h1>
-    <h2>Memes. Movement. Momentum. Ticker: $PPP</h2>
+    <div class="header">
+      <h1>Pepe Political Party</h1>
+      <p>Memes. Movement. Momentum. Ticker: $PPP</p>
+    </div>
 
     <div class="banner">
-      <img src="images/image-10.jpg" alt="Political Banner"/>
+      <img src="images/image-1.jpg" alt="Banner">
     </div>
 
     <div class="gallery">
-      <img src="images/image-1.jpg" alt="">
-      <img src="images/image-2.jpg" alt="">
-      <img src="images/image-3.jpg" alt="">
-      <img src="images/image-4.jpg" alt="">
-      <img src="images/image-5.jpg" alt="">
-      <img src="images/image-6.jpg" alt="">
-      <img src="images/image-7.jpg" alt="">
-      <img src="images/image-8.jpg" alt="">
-      <img src="images/image-9.jpg" alt="">
-    </div>
-
-    <div class="buttons">
-      <a href="#">🛒 Buy Now</a>
-      <a href="#">⏳ Coming Soon</a>
+      <img src="images/image-2.jpg" alt="Gallery 1">
+      <img src="images/image-3.jpg" alt="Gallery 2">
+      <img src="images/image-4.jpg" alt="Gallery 3">
+      <img src="images/image-5.jpg" alt="Gallery 4">
+      <img src="images/image-6.jpg" alt="Gallery 5">
+      <img src="images/image-7.jpg" alt="Gallery 6">
+      <img src="images/image-8.jpg" alt="Gallery 7">
+      <img src="images/image-9.jpg" alt="Gallery 8">
+      <img src="images/image-10.jpg" alt="Gallery 9">
     </div>
   </div>
+</div>
+
+<!-- Buy Now Popup -->
+<div class="buy-popup" id="buyPopup">
+  <h2>$PPP Buy Coming Soon</h2>
+  <p>This feature will be available after the blockchain rally begins.</p>
+  <button onclick="hidePopup()">Close</button>
+</div>
+
+<script>
+  function showPopup() {
+    document.getElementById('buyPopup').style.display = 'block';
+  }
+
+  function hidePopup() {
+    document.getElementById('buyPopup').style.display = 'none';
+  }
+</script>
+
 </body>
 </html>
