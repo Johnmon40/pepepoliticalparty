@@ -8,30 +8,28 @@
   <style>
     body {
       margin: 0;
-      background: #0a0a0a;
+      background: #111;
       font-family: 'Poppins', sans-serif;
       color: #fff;
     }
 
     header {
       text-align: center;
-      padding: 50px 20px;
-      background: linear-gradient(to bottom, #000, #111);
+      padding: 40px 20px;
+      background: linear-gradient(to bottom, #000000, #111111);
       box-shadow: 0 0 20px gold;
     }
 
     header h1 {
       font-family: 'Playfair Display', serif;
-      font-size: 3.5em;
+      font-size: 3.2em;
       color: gold;
-      text-shadow: 0 0 15px gold;
-      margin: 0;
+      text-shadow: 0 0 20px gold;
     }
 
     header p {
-      font-size: 1.3em;
+      font-size: 1.2em;
       color: #ccc;
-      margin-top: 10px;
     }
 
     .banner {
@@ -46,10 +44,10 @@
     section {
       padding: 40px 20px;
       max-width: 1000px;
-      margin: 60px auto;
+      margin: auto;
       background-color: #181818;
       border-radius: 20px;
-      box-shadow: 0 0 20px #ffd70044;
+      box-shadow: 0 0 20px #ffd70033;
     }
 
     section h2 {
@@ -57,33 +55,83 @@
       color: gold;
       font-family: 'Playfair Display', serif;
       text-align: center;
-      margin-bottom: 30px;
-      text-shadow: 0 0 10px gold;
+      margin-bottom: 20px;
+      text-shadow: 0 0 12px gold;
     }
 
     section p {
-      font-size: 1.15em;
+      font-size: 1.1em;
       color: #ccc;
-      text-align: center;
       line-height: 1.6;
-      margin-bottom: 40px;
+      text-align: center;
     }
 
     .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 25px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 40px;
     }
 
-    .gallery img {
-      width: 100%;
-      height: 260px;
-      object-fit: cover;
+    .gallery-item {
+      width: 250px;
+      background: #000;
       border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 0 12px gold;
+      transition: transform 0.3s ease;
       border: 2px solid gold;
-      box-shadow: 0 0 12px #ffd70044;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
-    .gallery img:hover {
-      transform: scale(1.03
+    .gallery-item:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 25px gold;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      display: block;
+    }
+
+    @media (max-width: 600px) {
+      .gallery-item {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Pepe Political Party</h1>
+    <p>Memes. Movement. Momentum. Ticker: $PPP</p>
+  </header>
+
+  <!-- ✅ Banner -->
+  <img src="images/image-8.jpg" alt="Pepe Political Banner" class="banner"/>
+
+  <section>
+    <h2>Welcome to the Meme-Driven Movement</h2>
+    <p>Pepe Political Party: Because the system’s already a joke — we’re just making it meme-worthy..</p>
+  </section>
+
+  <section>
+    <h2>Pepe For President Gallery</h2>
+    <div class="gallery">
+      <div class="gallery-item"><img src="images/image-1.jpg" alt="Pepe 1"/></div>
+      <div class="gallery-item"><img src="images/image-2.jpg" alt="Pepe 2"/></div>
+      <div class="gallery-item"><img src="images/image-3.jpg" alt="Pepe 3"/></div>
+      <div class="gallery-item"><img src="images/image-4.jpg" alt="Pepe 4"/></div>
+      <div class="gallery-item"><img src="images/image-5.jpg" alt="Pepe 5"/></div>
+      <div class="gallery-item"><img src="images/image-6.jpg" alt="Pepe 6"/></div>
+      <div class="gallery-item"><img src="images/image-7.jpg" alt="Pepe 7"/></div>
+      <div class="gallery-item"><img src="images/image-8.jpg" alt="Pepe 8"/></div>
+      <div class="gallery-item"><img src="images/image-9.jpg" alt="Pepe 9"/></div>
+      <div class="gallery-item"><img src="images/image-10.jpg" alt="Pepe 10"/></div>
+    </div>
+  </section>
+</body>
+</html>
