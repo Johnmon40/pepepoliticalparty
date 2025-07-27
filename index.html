@@ -11,6 +11,43 @@
       background: #0a0a0a;
       font-family: 'Roboto', sans-serif;
       color: #fff;
+      display: flex;
+    }
+
+    nav {
+      width: 220px;
+      background: #111;
+      padding: 30px 20px;
+      border-right: 3px solid gold;
+      height: 100vh;
+      position: fixed;
+    }
+
+    nav h2 {
+      font-family: 'Playfair Display', serif;
+      color: gold;
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 1.5em;
+    }
+
+    nav a {
+      display: block;
+      color: #ccc;
+      text-decoration: none;
+      margin: 15px 0;
+      font-size: 1.1em;
+      transition: all 0.3s ease;
+    }
+
+    nav a:hover {
+      color: gold;
+      padding-left: 10px;
+    }
+
+    .main {
+      margin-left: 220px;
+      width: 100%;
     }
 
     header {
@@ -76,12 +113,20 @@
 
     .gallery-item img {
       width: 100%;
-      height: 100%;
+      height: 250px;
       object-fit: cover;
       display: block;
     }
 
-    @media (max-width: 600px) {
+    @media (max-width: 768px) {
+      nav {
+        display: none;
+      }
+
+      .main {
+        margin-left: 0;
+      }
+
       .gallery-item {
         width: 100%;
       }
@@ -90,22 +135,36 @@
 </head>
 
 <body>
+  <nav>
+    <h2>$PPP</h2>
+    <a href="index.html">🏛️ Home</a>
+    <a href="president.html">👑 President Pepe</a>
+    <a href="vicepresident.html">💫 VP Vibeshift</a>
+    <a href="firstlady.html">👠 First Lady Binnmaggot</a>
+  </nav>
 
-  <header>
-    <h1>Pepe Political Party</h1>
-    <p>Memes. Movement. Momentum. Ticker: $PPP</p>
-  </header>
+  <div class="main">
+    <header>
+      <h1>Pepe Political Party</h1>
+      <p>Memes. Movement. Momentum. Ticker: $PPP</p>
+    </header>
 
-  <!-- Banner Image -->
-  <img src="images/image-8.jpg" alt="Pepe Political Banner" class="banner"/>
+    <img src="images/image-8.jpg" alt="Pepe Political Banner" class="banner"/>
 
-  <!-- Gallery Section -->
-  <section class="gallery-section">
-    <div class="gallery">
-      <div class="gallery-item"><img src="images/image-1.jpg" alt="Pepe 1"/></div>
-      <div class="gallery-item"><img src="images/image-2.jpg" alt="Pepe 2"/></div>
-      <div class="gallery-item"><img src="images/image-3.jpg" alt="Pepe 3"/></div>
-      <div class="gallery-item"><img src="images/image-4.jpg" alt="Pepe 4"/></div>
-      <div class="gallery-item"><img src="images/image-5.jpg" alt="Pepe 5"/></div>
-      <div class="gallery-item"><img src="images/image-6.jpg" alt="Pepe 6"/></div>
-      <div class="gallery-item"><img src="images/image-7.jp
+    <section class="gallery-section">
+      <div class="gallery">
+        <div class="gallery-item"><img src="images/image-1.jpg" alt="Pepe 1"/></div>
+        <div class="gallery-item"><img src="images/image-2.jpg" alt="Pepe 2"/></div>
+        <div class="gallery-item"><img src="images/image-3.jpg" alt="Pepe 3"/></div>
+        <div class="gallery-item"><img src="images/image-4.jpg" alt="Pepe 4"/></div>
+        <div class="gallery-item"><img src="images/image-5.jpg" alt="Pepe 5"/></div>
+        <div class="gallery-item"><img src="images/image-6.jpg" alt="Pepe 6"/></div>
+        <div class="gallery-item"><img src="images/image-7.jpg" alt="Pepe 7"/></div>
+        <div class="gallery-item"><img src="images/image-8.jpg" alt="Pepe 8"/></div>
+        <div class="gallery-item"><img src="images/image-9.jpg" alt="Pepe 9"/></div>
+        <div class="gallery-item"><img src="images/image-10.jpg" alt="Pepe 10"/></div>
+      </div>
+    </section>
+  </div>
+</body>
+</html>
