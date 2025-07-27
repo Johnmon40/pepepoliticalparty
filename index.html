@@ -4,212 +4,181 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Pepe Political Party</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@300;500&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
-      background: #0a0a0a;
-      font-family: 'Roboto', sans-serif;
+      font-family: 'Arial', sans-serif;
+      background-color: #000;
       color: #fff;
     }
 
-    .mobile-nav-toggle {
-      display: none;
-      background: gold;
-      color: #000;
-      font-weight: bold;
-      border: none;
-      padding: 10px 15px;
-      font-size: 1em;
-      position: fixed;
-      top: 10px;
-      left: 10px;
-      z-index: 1001;
-      border-radius: 5px;
-    }
-
-    nav {
+    .sidebar {
+      background-color: #111;
+      color: gold;
+      padding: 20px;
       width: 220px;
-      background: #111;
-      padding: 30px 20px;
-      border-right: 3px solid gold;
-      height: 100vh;
       position: fixed;
-      top: 0;
-      left: 0;
+      height: 100%;
       overflow-y: auto;
-      transition: transform 0.3s ease;
-      z-index: 1000;
+      display: flex;
+      flex-direction: column;
     }
 
-    nav h2 {
-      font-family: 'Playfair Display', serif;
-      color: gold;
+    .sidebar h1 {
+      margin: 0 0 5px;
+      font-size: 20px;
       text-align: center;
-      margin-bottom: 30px;
-      font-size: 1.5em;
     }
 
-    nav a {
-      display: block;
-      color: #ccc;
+    .sidebar h2 {
+      margin: 0 0 20px;
+      font-size: 28px;
+      text-align: center;
+    }
+
+    .sidebar a {
+      color: #ddd;
       text-decoration: none;
-      margin: 15px 0;
-      font-size: 1.1em;
-      transition: all 0.3s ease;
+      margin: 10px 0;
+      display: block;
+      font-size: 16px;
     }
 
-    nav a:hover {
+    .sidebar a:hover {
       color: gold;
-      padding-left: 10px;
     }
 
     .main {
       margin-left: 220px;
-      transition: margin 0.3s ease;
+      padding: 20px;
     }
 
-    header {
-      text-align: center;
-      padding: 50px 20px 30px;
-      background: #000;
-      box-shadow: 0 0 30px gold;
-    }
-
-    header h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: 3.5em;
+    .main h1 {
       color: gold;
-      text-shadow: 0 0 20px gold;
-      margin: 0;
+      text-shadow: 0 0 10px gold;
+      font-size: 36px;
+      margin-bottom: 10px;
     }
 
-    header p {
-      font-size: 1.2em;
-      color: #ccc;
-      margin-top: 10px;
-      letter-spacing: 1px;
+    .main h2 {
+      font-size: 20px;
+      margin-bottom: 20px;
     }
 
-    .banner {
+    .banner img {
       width: 100%;
-      height: auto;
-      display: block;
-      object-fit: contain;
-      border-top: 4px solid gold;
-      border-bottom: 4px solid gold;
-    }
-
-    .gallery-section {
-      padding: 50px 20px;
-      max-width: 1200px;
-      margin: auto;
+      max-height: 300px;
+      object-fit: cover;
+      border: 3px solid gold;
+      margin-bottom: 30px;
     }
 
     .gallery {
       display: flex;
       flex-wrap: wrap;
+      gap: 20px;
       justify-content: center;
-      gap: 25px;
     }
 
-    .gallery-item {
-      width: 250px;
-      background: #111;
-      border-radius: 12px;
-      overflow: hidden;
-      box-shadow: 0 0 15px gold;
-      transition: transform 0.3s ease;
-      border: 2px solid gold;
-    }
-
-    .gallery-item:hover {
-      transform: scale(1.05);
-      box-shadow: 0 0 30px gold;
-    }
-
-    .gallery-item img {
-      width: 100%;
-      height: 250px;
+    .gallery img {
+      width: 300px;
+      height: 300px;
       object-fit: cover;
-      display: block;
+      border: 3px solid gold;
+      border-radius: 10px;
+      transition: transform 0.3s ease;
     }
 
-    /* Mobile Styles */
-    @media (max-width: 768px) {
-      .mobile-nav-toggle {
-        display: block;
-      }
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
 
-      nav {
-        position: absolute;
-        top: 0;
-        left: 0;
+    .buttons {
+      margin: 30px 0;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .buttons a {
+      text-align: center;
+      background-color: gold;
+      color: black;
+      padding: 15px;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 10px;
+    }
+
+    @media (max-width: 768px) {
+      .sidebar {
+        position: relative;
         width: 100%;
         height: auto;
-        transform: translateY(-100%);
-        transition: transform 0.3s ease;
-        border-right: none;
-        border-bottom: 3px solid gold;
+        flex-direction: row;
+        justify-content: space-around;
+        flex-wrap: wrap;
       }
 
-      nav.active {
-        transform: translateY(0);
+      .sidebar h1,
+      .sidebar h2 {
+        width: 100%;
+        text-align: center;
       }
 
       .main {
         margin-left: 0;
-        padding-top: 60px;
+        padding: 15px;
       }
 
-      .gallery-item {
-        width: 90%;
+      .gallery img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+      }
+
+      .banner img {
+        max-height: none;
       }
     }
   </style>
 </head>
 <body>
-
-  <button class="mobile-nav-toggle" onclick="toggleNav()">☰ Menu</button>
-
-  <nav id="mobileNav">
+  <div class="sidebar">
+    <h1>Pepe Political Party</h1>
     <h2>$PPP</h2>
-    <a href="index.html">🏛️ Home</a>
+    <a href="index.html">🏛 Home</a>
     <a href="president.html">👑 President Pepe</a>
-    <a href="vicepresident.html">💫 VP Vibeshift</a>
-    <a href="firstlady.html">👠 First Lady Binnmaggot</a>
-    <a href="#" onclick="alert('Coming soon!')">🪙 Buy Now</a>
-  </nav>
-
-  <div class="main">
-    <header>
-      <h1>Pepe Political Party</h1>
-      <p>Memes. Movement. Momentum. Ticker: $PPP</p>
-    </header>
-
-    <img src="images/image-8.jpg" alt="Pepe Political Banner" class="banner"/>
-
-    <section class="gallery-section">
-      <div class="gallery">
-        <div class="gallery-item"><img src="images/image-1.jpg" alt=""/></div>
-        <div class="gallery-item"><img src="images/image-2.jpg" alt=""/></div>
-        <div class="gallery-item"><img src="images/image-3.jpg" alt=""/></div>
-        <div class="gallery-item"><img src="images/image-4.jpg" alt=""/></div>
-        <div class="gallery-item"><img src="images/image-5.jpg" alt=""/></div>
-        <div class="gallery-item"><img src="images/image-6.jpg" alt=""/></div>
-        <div class="gallery-item"><img src="images/image-7.jpg" alt=""/></div>
-        <div class="gallery-item"><img src="images/image-8.jpg" alt=""/></div>
-        <div class="gallery-item"><img src="images/image-9.jpg" alt=""/></div>
-        <div class="gallery-item"><img src="images/image-10.jpg" alt=""/></div>
-      </div>
-    </section>
+    <a href="vicepresident.html">🧢 VP Vibeshift</a>
+    <a href="firstlady.html">💃 First Lady Binnmaggot</a>
+    <a href="#">🛒 Buy Now</a>
+    <a href="#">⏳ Coming Soon</a>
   </div>
 
-  <script>
-    function toggleNav() {
-      document.getElementById('mobileNav').classList.toggle('active');
-    }
-  </script>
+  <div class="main">
+    <h1>Pepe Political Party</h1>
+    <h2>Memes. Movement. Momentum. Ticker: $PPP</h2>
 
+    <div class="banner">
+      <img src="images/image-10.jpg" alt="Political Banner"/>
+    </div>
+
+    <div class="gallery">
+      <img src="images/image-1.jpg" alt="">
+      <img src="images/image-2.jpg" alt="">
+      <img src="images/image-3.jpg" alt="">
+      <img src="images/image-4.jpg" alt="">
+      <img src="images/image-5.jpg" alt="">
+      <img src="images/image-6.jpg" alt="">
+      <img src="images/image-7.jpg" alt="">
+      <img src="images/image-8.jpg" alt="">
+      <img src="images/image-9.jpg" alt="">
+    </div>
+
+    <div class="buttons">
+      <a href="#">🛒 Buy Now</a>
+      <a href="#">⏳ Coming Soon</a>
+    </div>
+  </div>
 </body>
 </html>
