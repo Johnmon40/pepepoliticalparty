@@ -33,12 +33,12 @@
 
     #sidebar {
       background-color: #111;
-      width: 200px;
+      width: 260px;
       position: fixed;
       top: 0;
       bottom: 0;
       left: 0;
-      padding: 30px 15px;
+      padding: 30px 20px;
       border-right: 2px solid gold;
       z-index: 1000;
       transition: transform 0.3s ease-in-out;
@@ -47,7 +47,7 @@
     #sidebar h2 {
       color: gold;
       font-family: 'Playfair Display', serif;
-      font-size: 1.5em;
+      font-size: 1.8em;
       margin-bottom: 20px;
     }
 
@@ -56,7 +56,7 @@
       color: white;
       text-decoration: none;
       margin: 10px 0;
-      font-size: 1em;
+      font-size: 1.1em;
       transition: all 0.2s ease-in-out;
     }
 
@@ -66,7 +66,7 @@
     }
 
     #main {
-      margin-left: 200px;
+      margin-left: 260px;
       padding: 20px;
       flex: 1;
     }
@@ -97,6 +97,7 @@
       transform: scale(1.03);
     }
 
+    /* Mobile Sidebar */
     #hamburger {
       display: none;
       position: fixed;
@@ -189,17 +190,17 @@
     $PPP - The Pepe Political Party
   </header>
 
-  <img src="images/banner.jpg" alt="PPP Banner" class="banner">
+  <img src="banner.jpg" alt="PPP Banner" class="banner">
 
   <div class="gallery">
-    <img src="images/image-1.jpg" alt="PPP Image 1">
-    <img src="images/image-2.jpg" alt="PPP Image 2">
-    <img src="images/image-3.jpg" alt="PPP Image 3">
-    <img src="images/image-4.jpg" alt="PPP Image 4">
-    <img src="images/image-5.jpg" alt="PPP Image 5">
-    <img src="images/image-6.jpg" alt="PPP Image 6">
-    <img src="images/image-7.jpg" alt="PPP Image 7">
-    <img src="images/image-8.jpg" alt="PPP Image 8">
+    <img src="image1.jpg" alt="PPP Image 1">
+    <img src="image2.jpg" alt="PPP Image 2">
+    <img src="image3.jpg" alt="PPP Image 3">
+    <img src="image4.jpg" alt="PPP Image 4">
+    <img src="image5.jpg" alt="PPP Image 5">
+    <img src="image6.jpg" alt="PPP Image 6">
+    <img src="image7.jpg" alt="PPP Image 7">
+    <img src="image8.jpg" alt="PPP Image 8">
   </div>
 </div>
 
@@ -210,7 +211,8 @@
 
 <script>
   function toggleSidebar() {
-    document.getElementById("sidebar").classList.toggle("active");
+    const sidebar = document.getElementById("sidebar");
+    sidebar.classList.toggle("active");
   }
 
   function showPopup() {
