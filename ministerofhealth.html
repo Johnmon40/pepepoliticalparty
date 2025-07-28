@@ -8,84 +8,95 @@
   <style>
     body {
       margin: 0;
-      font-family: 'Roboto', sans-serif;
+      padding: 0;
       background-color: #0a0a0a;
-      color: #fff;
+      font-family: 'Roboto', sans-serif;
+      color: white;
     }
 
     .container {
       max-width: 900px;
-      margin: auto;
-      padding: 30px 20px;
+      margin: 0 auto;
+      padding: 40px 20px;
     }
 
     h1 {
       font-family: 'Anton', sans-serif;
-      font-size: 36px;
       color: gold;
-      text-shadow: 0 0 10px gold;
-      margin-bottom: 20px;
+      text-shadow: 0 0 8px gold;
+      font-size: 32px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
     }
 
-    p {
-      font-size: 18px;
-      line-height: 1.7;
-      color: #eee;
-      margin-bottom: 20px;
+    .back-btn {
+      display: inline-block;
+      margin-bottom: 30px;
+      padding: 10px 18px;
+      background-color: gold;
+      color: black;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 6px;
+      transition: background 0.3s;
+    }
+
+    .back-btn:hover {
+      background-color: #ffd700;
     }
 
     img {
       max-width: 100%;
-      border: 3px solid gold;
-      border-radius: 12px;
-      margin-bottom: 25px;
+      height: auto;
+      margin: 30px 0;
+      border-radius: 10px;
     }
 
-    .back-button {
-      display: inline-block;
-      margin-top: 30px;
-      padding: 10px 16px;
-      background-color: gold;
-      color: #000;
-      text-decoration: none;
-      border-radius: 8px;
-      font-weight: bold;
-      transition: background-color 0.3s;
+    p {
+      font-size: 18px;
+      line-height: 1.6;
+      margin-bottom: 20px;
+      color: #eee;
     }
 
-    .back-button:hover {
-      background-color: #ffd700;
-    }
-
-    @media screen and (max-width: 768px) {
+    @media (max-width: 768px) {
       h1 {
-        font-size: 28px;
-      }
-
-      p {
-        font-size: 16px;
+        font-size: 26px;
+        flex-wrap: wrap;
       }
 
       .container {
         padding: 20px 15px;
+      }
+
+      p {
+        font-size: 16px;
       }
     }
   </style>
 </head>
 <body>
   <div class="container">
+    <a href="index.html" class="back-btn">← Back to Main Menu</a>
+
     <h1>🥗 Minister of Health: Nixon</h1>
-    <img src="ministerofhealth.jpg" alt="Minister of Health Nixon">
+
+    <img src="images/ministerofhealth.jpg" alt="Minister of Health Nixon">
 
     <p><strong>How Nixon Got Elected – The Meme Chef of the Pepe Political Party</strong></p>
-    <p>While other candidates were kissing babies, Nixon was chopping wood, roofing houses, running the local meme bar—and still finding time to drop world-class memes that made even the most jaded shitcoiners whisper “based.”</p>
-    <p>He didn’t just out-meme the world. He out-lived it.</p>
-    <p>Every meme he posted felt like it was forged in the fires of crypto lore and seasoned with sarcasm. But behind the shitposts and the smoke was a man with unmatched hustle and—most importantly—a salad game so strong it had enemies asking for seconds.</p>
-    <p>By day, he crafted memes sharper than a chainlink fudder’s tears. By night, he grilled tacos so divine even Satoshi would’ve unmasked just for a bite. His kitchen? Pure chaos. Flames, spice, laughter, and somehow, perfectly plated beauty every time.</p>
-    <p>In the end, it wasn’t just the memes or the hammer or the rooftop bar vibes. It was the cilantro-lime sauce.</p>
-    <p>And that’s how Nixon became Minister of Health—because nothing heals a nation like a damn good taco.</p>
 
-    <a class="back-button" href="index.html">← Back to Main Menu</a>
+    <p>While other candidates were kissing babies, Nixon was chopping wood, roofing houses, running the local meme bar—and still finding time to drop world-class memes that made even the most jaded shitcoiners whisper “based.”</p>
+
+    <p>He didn’t just out-meme the world. He out-lived it.</p>
+
+    <p>Every meme he posted felt like it was forged in the fires of crypto lore and seasoned with sarcasm. But behind the shitposts and the smoke was a man with unmatched hustle and—most importantly—a salad game so strong it had enemies asking for seconds.</p>
+
+    <p>By day, he crafted memes sharper than a chainlink fudder’s tears. By night, he grilled tacos so divine even Satoshi would’ve unmasked just for a bite. His kitchen? Pure chaos. Flames, spice, laughter, and somehow, perfectly plated beauty every time.</p>
+
+    <p>In the end, it wasn’t just the memes or the hammer or the rooftop bar vibes. It was the cilantro-lime sauce.</p>
+
+    <p>And that’s how Nixon became Minister of Health—because nothing heals a nation like a damn good taco.</p>
   </div>
 </body>
 </html>
