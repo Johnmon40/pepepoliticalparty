@@ -3,16 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Pepe Political Party</title>
+  <title>Pepe Political Party - $PPP</title>
   <link href="https://fonts.googleapis.com/css2?family=Anton&family=Roboto:wght@300;700&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
       background: #0a0a0a;
       font-family: 'Roboto', sans-serif;
-      color: #fff;
+      color: white;
       display: flex;
-      flex-direction: row;
     }
 
     nav {
@@ -52,74 +51,34 @@
 
     .main {
       margin-left: 230px;
-      width: calc(100% - 230px);
+      padding: 40px 20px;
+      max-width: 900px;
     }
 
-    header {
-      text-align: center;
-      padding: 50px 20px 30px;
-      background: #000;
-      box-shadow: 0 0 30px gold;
-    }
-
-    header h1 {
+    h1 {
       font-family: 'Anton', sans-serif;
-      font-size: 3em;
+      font-size: 2.2em;
       color: gold;
-      text-shadow: 0 0 15px gold;
-      margin: 0;
-    }
-
-    header p {
-      font-size: 1.2em;
-      color: #ccc;
-      margin-top: 10px;
-      letter-spacing: 1px;
-    }
-
-    .banner {
-      width: 100%;
-      height: auto;
-      display: block;
-      object-fit: cover;
-      border-top: 4px solid gold;
-      border-bottom: 4px solid gold;
-      background-color: #000;
-    }
-
-    .gallery-section {
-      padding: 50px 20px;
-      max-width: 1200px;
-      margin: auto;
+      text-shadow: 0 0 10px gold;
+      margin-bottom: 20px;
     }
 
     .gallery {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 25px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
     }
 
-    .gallery-item {
-      width: 250px;
-      background: #111;
-      border-radius: 12px;
-      overflow: hidden;
-      box-shadow: 0 0 15px gold;
-      transition: transform 0.3s ease;
-      border: 2px solid gold;
-    }
-
-    .gallery-item:hover {
-      transform: scale(1.05);
-      box-shadow: 0 0 30px gold;
-    }
-
-    .gallery-item img {
+    .gallery img {
       width: 100%;
-      height: 250px;
-      object-fit: cover;
-      display: block;
+      border: 3px solid gold;
+      border-radius: 10px;
+      box-shadow: 0 0 10px gold;
+      transition: transform 0.3s ease;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
     }
 
     @media (max-width: 768px) {
@@ -148,17 +107,10 @@
 
       .main {
         margin-left: 0;
-        width: 100%;
-      }
-
-      .gallery-item {
-        width: 100%;
-        max-width: 320px;
       }
     }
   </style>
 </head>
-
 <body>
   <nav>
     <h2>Pepe Political Party<br>$PPP</h2>
@@ -167,33 +119,22 @@
     <a href="vicepresident.html">📘 VP Vibeshift</a>
     <a href="firstlady.html">💄 First Lady Binnmaggot</a>
     <a href="ministerofhealth.html">🍴 Minister of Health</a>
-    <a href="livestock.html">🐐 Agriculture & Livestock</a>
+    <a href="agriculture.html">🐐 Director of Agriculture & Livestock</a>
     <a href="origins.html">📜 Origins</a>
     <a href="#" onclick="alert('Coming Soon'); return false;">🛒 Buy Now</a>
   </nav>
 
   <div class="main">
-    <header>
-      <h1>Pepe Political Party</h1>
-      <p>Memes. Movement. Momentum. Ticker: $PPP</p>
-    </header>
+    <h1>🇺🇸 Welcome to the Pepe Political Party – $PPP</h1>
+    <p>The only party where memes lead, frogs rule, and your vote is cast in SOL.</p>
 
-    <img src="images/image-8.jpg" alt="Pepe Political Banner" class="banner"/>
-
-    <section class="gallery-section">
-      <div class="gallery">
-        <div class="gallery-item"><img src="images/image-1.jpg" alt="Pepe 1"/></div>
-        <div class="gallery-item"><img src="images/image-2.jpg" alt="Pepe 2"/></div>
-        <div class="gallery-item"><img src="images/image-3.jpg" alt="Pepe 3"/></div>
-        <div class="gallery-item"><img src="images/image-4.jpg" alt="Pepe 4"/></div>
-        <div class="gallery-item"><img src="images/image-5.jpg" alt="Pepe 5"/></div>
-        <div class="gallery-item"><img src="images/image-6.jpg" alt="Pepe 6"/></div>
-        <div class="gallery-item"><img src="images/image-7.jpg" alt="Pepe 7"/></div>
-        <div class="gallery-item"><img src="images/image-8.jpg" alt="Pepe 8"/></div>
-        <div class="gallery-item"><img src="images/image-9.jpg" alt="Pepe 9"/></div>
-        <div class="gallery-item"><img src="images/image-10.jpg" alt="Pepe 10"/></div>
-      </div>
-    </section>
+    <div class="gallery">
+      <img src="images/pepe.jpg" alt="President Pepe">
+      <img src="images/vp.jpg" alt="Vice President Vibeshift">
+      <img src="images/firstlady.jpg" alt="First Lady Binnmaggot">
+      <img src="images/ministerofhealth.jpg" alt="Minister of Health Nixon">
+      <img src="images/parabolic.jpg" alt="Director of Agriculture Parabolic">
+    </div>
   </div>
 </body>
 </html>
