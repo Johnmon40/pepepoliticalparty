@@ -3,185 +3,89 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Pepe Political Party</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@300;500&display=swap" rel="stylesheet">
+  <title>Minister of Health – Nixon</title>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Roboto:wght@300;700&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
-      background: #0a0a0a;
       font-family: 'Roboto', sans-serif;
+      background-color: #0a0a0a;
       color: #fff;
-      display: flex;
     }
 
-    nav {
-      width: 230px;
-      background: #111;
-      padding: 30px 20px;
-      border-right: 3px solid gold;
-      height: 100vh;
-      position: fixed;
-      overflow-y: auto;
-    }
-
-    nav h2 {
-      font-family: 'Playfair Display', serif;
-      color: gold;
-      text-align: center;
-      margin-bottom: 30px;
-      font-size: 1.8em;
-    }
-
-    nav a {
-      display: block;
-      color: #ccc;
-      text-decoration: none;
-      margin: 15px 0;
-      font-size: 1.1em;
-      transition: all 0.3s ease;
-    }
-
-    nav a:hover {
-      color: gold;
-      padding-left: 10px;
-    }
-
-    .main {
-      margin-left: 230px;
-      width: 100%;
-    }
-
-    header {
-      text-align: center;
-      padding: 50px 20px 30px;
-      background: #000;
-      box-shadow: 0 0 30px gold;
-    }
-
-    header h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: 3.5em;
-      color: gold;
-      text-shadow: 0 0 20px gold;
-      margin: 0;
-    }
-
-    header p {
-      font-size: 1.2em;
-      color: #ccc;
-      margin-top: 10px;
-      letter-spacing: 1px;
-    }
-
-    .banner {
-      width: 100%;
-      max-width: 100%;
-      height: auto;
-      display: block;
-      object-fit: contain;
-      border-top: 4px solid gold;
-      border-bottom: 4px solid gold;
-      background-color: #000;
-    }
-
-    .gallery-section {
-      padding: 50px 20px;
-      max-width: 1200px;
+    .container {
+      max-width: 900px;
       margin: auto;
+      padding: 30px 20px;
     }
 
-    .gallery {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 25px;
+    h1 {
+      font-family: 'Anton', sans-serif;
+      font-size: 36px;
+      color: gold;
+      text-shadow: 0 0 10px gold;
+      margin-bottom: 20px;
     }
 
-    .gallery-item {
-      width: 250px;
-      background: #111;
+    p {
+      font-size: 18px;
+      line-height: 1.7;
+      color: #eee;
+      margin-bottom: 20px;
+    }
+
+    img {
+      max-width: 100%;
+      border: 3px solid gold;
       border-radius: 12px;
-      overflow: hidden;
-      box-shadow: 0 0 15px gold;
-      transition: transform 0.3s ease;
-      border: 2px solid gold;
+      margin-bottom: 25px;
     }
 
-    .gallery-item:hover {
-      transform: scale(1.05);
-      box-shadow: 0 0 30px gold;
+    .back-button {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 10px 16px;
+      background-color: gold;
+      color: #000;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: background-color 0.3s;
     }
 
-    .gallery-item img {
-      width: 100%;
-      height: 250px;
-      object-fit: cover;
-      display: block;
+    .back-button:hover {
+      background-color: #ffd700;
     }
 
-    @media (max-width: 768px) {
-      nav {
-        width: 100%;
-        height: auto;
-        position: relative;
-        border-right: none;
-        border-bottom: 3px solid gold;
-        padding: 10px;
+    @media screen and (max-width: 768px) {
+      h1 {
+        font-size: 28px;
       }
 
-      nav a {
-        display: inline-block;
-        margin: 10px;
+      p {
+        font-size: 16px;
       }
 
-      .main {
-        margin-left: 0;
-      }
-
-      .gallery-item {
-        width: 100%;
+      .container {
+        padding: 20px 15px;
       }
     }
   </style>
 </head>
-
 <body>
-  <nav>
-    <h2>Pepe Political Party<br>$PPP</h2>
-    <a href="index.html">🏛️ Home</a>
-    <a href="president.html">👑 President Pepe</a>
-    <a href="vicepresident.html">📘 VP Vibeshift</a>
-    <a href="firstlady.html">💄 First Lady Binnmaggot</a>
-    <a href="chief.html">🔥 Chief of Staff</a>
-    <a href="agriculture.html">🐐 Director of Agriculture</a>
-    <a href="origins.html">📜 Origins</a>
-    <a href="#" onclick="alert('Coming Soon'); return false;">🛒 Buy Now</a>
-  </nav>
+  <div class="container">
+    <h1>🥗 Minister of Health: Nixon</h1>
+    <img src="ministerofhealth.jpg" alt="Minister of Health Nixon">
+    
+    <p><strong>How Nixon Got Elected – The Meme Chef of the Pepe Political Party</strong></p>
+    <p>While other candidates were kissing babies, Nixon was chopping wood, roofing houses, running the local meme bar—and still finding time to drop world-class memes that made even the most jaded shitcoiners whisper “based.”</p>
+    <p>He didn’t just out-meme the world. He out-lived it.</p>
+    <p>Every meme he posted felt like it was forged in the fires of crypto lore and seasoned with sarcasm. But behind the shitposts and the smoke was a man with unmatched hustle and—most importantly—a salad game so strong it had enemies asking for seconds.</p>
+    <p>By day, he crafted memes sharper than a chainlink fudder’s tears. By night, he grilled tacos so divine even Satoshi would’ve unmasked just for a bite. His kitchen? Pure chaos. Flames, spice, laughter, and somehow, perfectly plated beauty every time.</p>
+    <p>In the end, it wasn’t just the memes or the hammer or the rooftop bar vibes. It was the cilantro-lime sauce.</p>
+    <p>And that’s how Nixon became Minister of Health—because nothing heals a nation like a damn good taco.</p>
 
-  <div class="main">
-    <header>
-      <h1>Pepe Political Party</h1>
-      <p>Memes. Movement. Momentum. Ticker: $PPP</p>
-    </header>
-
-    <!-- Main Banner -->
-    <img src="images/image-8.jpg" alt="Pepe Political Banner" class="banner"/>
-
-    <!-- Gallery -->
-    <section class="gallery-section">
-      <div class="gallery">
-        <div class="gallery-item"><img src="images/image-1.jpg" alt="Pepe 1"/></div>
-        <div class="gallery-item"><img src="images/image-2.jpg" alt="Pepe 2"/></div>
-        <div class="gallery-item"><img src="images/image-3.jpg" alt="Pepe 3"/></div>
-        <div class="gallery-item"><img src="images/image-4.jpg" alt="Pepe 4"/></div>
-        <div class="gallery-item"><img src="images/image-5.jpg" alt="Pepe 5"/></div>
-        <div class="gallery-item"><img src="images/image-6.jpg" alt="Pepe 6"/></div>
-        <div class="gallery-item"><img src="images/image-7.jpg" alt="Pepe 7"/></div>
-        <div class="gallery-item"><img src="images/image-8.jpg" alt="Pepe 8"/></div>
-        <div class="gallery-item"><img src="images/image-9.jpg" alt="Pepe 9"/></div>
-        <div class="gallery-item"><img src="images/image-10.jpg" alt="Pepe 10"/></div>
-      </div>
-    </section>
+    <a class="back-button" href="index.html">← Back to Main Menu</a>
   </div>
 </body>
 </html>
