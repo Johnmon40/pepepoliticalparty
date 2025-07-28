@@ -11,51 +11,41 @@
       background: #0a0a0a;
       font-family: 'Roboto', sans-serif;
       color: #fff;
-    }
-
-    .mobile-nav-toggle {
-      display: none;
-      background: gold;
-      color: #000;
-      font-weight: bold;
-      border: none;
-      padding: 10px 15px;
-      font-size: 1em;
-      position: fixed;
-      top: 10px;
-      left: 10px;
-      z-index: 1001;
-      border-radius: 5px;
+      display: flex;
+      flex-direction: row;
     }
 
     nav {
-      width: 220px;
+      width: 240px;
       background: #111;
       padding: 30px 20px;
       border-right: 3px solid gold;
       height: 100vh;
       position: fixed;
-      top: 0;
-      left: 0;
-      overflow-y: auto;
-      transition: transform 0.3s ease;
-      z-index: 1000;
+    }
+
+    nav h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.4em;
+      color: #fff;
+      margin-bottom: 5px;
+      text-align: center;
     }
 
     nav h2 {
       font-family: 'Playfair Display', serif;
       color: gold;
       text-align: center;
-      margin-bottom: 30px;
-      font-size: 1.5em;
+      font-size: 1.2em;
+      margin-bottom: 25px;
     }
 
     nav a {
       display: block;
       color: #ccc;
       text-decoration: none;
-      margin: 15px 0;
-      font-size: 1.1em;
+      margin: 14px 0;
+      font-size: 1.05em;
       transition: all 0.3s ease;
     }
 
@@ -65,8 +55,8 @@
     }
 
     .main {
-      margin-left: 220px;
-      transition: margin 0.3s ease;
+      margin-left: 240px;
+      width: calc(100% - 240px);
     }
 
     header {
@@ -78,7 +68,7 @@
 
     header h1 {
       font-family: 'Playfair Display', serif;
-      font-size: 3.5em;
+      font-size: 3.3em;
       color: gold;
       text-shadow: 0 0 20px gold;
       margin: 0;
@@ -94,10 +84,10 @@
     .banner {
       width: 100%;
       height: auto;
-      display: block;
       object-fit: contain;
       border-top: 4px solid gold;
       border-bottom: 4px solid gold;
+      background-color: #000;
     }
 
     .gallery-section {
@@ -135,50 +125,45 @@
       display: block;
     }
 
-    /* Mobile Styles */
     @media (max-width: 768px) {
-      .mobile-nav-toggle {
-        display: block;
-      }
-
       nav {
-        position: absolute;
-        top: 0;
-        left: 0;
+        position: relative;
         width: 100%;
         height: auto;
-        transform: translateY(-100%);
-        transition: transform 0.3s ease;
         border-right: none;
         border-bottom: 3px solid gold;
-      }
-
-      nav.active {
-        transform: translateY(0);
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
       }
 
       .main {
         margin-left: 0;
-        padding-top: 60px;
+        width: 100%;
+      }
+
+      nav a {
+        margin: 10px 15px;
+        font-size: 1em;
       }
 
       .gallery-item {
-        width: 90%;
+        width: 100%;
       }
     }
   </style>
 </head>
+
 <body>
-
-  <button class="mobile-nav-toggle" onclick="toggleNav()">☰ Menu</button>
-
-  <nav id="mobileNav">
+  <nav>
+    <h1>Pepe Political Party</h1>
     <h2>$PPP</h2>
     <a href="index.html">🏛️ Home</a>
     <a href="president.html">👑 President Pepe</a>
     <a href="vicepresident.html">💫 VP Vibeshift</a>
     <a href="firstlady.html">👠 First Lady Binnmaggot</a>
-    <a href="#" onclick="alert('Coming soon!')">🪙 Buy Now</a>
+    <a href="origins.html">📜 Origins</a>
+    <a href="#" onclick="alert('Coming soon!')">🛒 Buy Now</a>
   </nav>
 
   <div class="main">
@@ -191,25 +176,18 @@
 
     <section class="gallery-section">
       <div class="gallery">
-        <div class="gallery-item"><img src="images/image-1.jpg" alt=""/></div>
-        <div class="gallery-item"><img src="images/image-2.jpg" alt=""/></div>
-        <div class="gallery-item"><img src="images/image-3.jpg" alt=""/></div>
-        <div class="gallery-item"><img src="images/image-4.jpg" alt=""/></div>
-        <div class="gallery-item"><img src="images/image-5.jpg" alt=""/></div>
-        <div class="gallery-item"><img src="images/image-6.jpg" alt=""/></div>
-        <div class="gallery-item"><img src="images/image-7.jpg" alt=""/></div>
-        <div class="gallery-item"><img src="images/image-8.jpg" alt=""/></div>
-        <div class="gallery-item"><img src="images/image-9.jpg" alt=""/></div>
-        <div class="gallery-item"><img src="images/image-10.jpg" alt=""/></div>
+        <div class="gallery-item"><img src="images/image-1.jpg" alt="Pepe 1"/></div>
+        <div class="gallery-item"><img src="images/image-2.jpg" alt="Pepe 2"/></div>
+        <div class="gallery-item"><img src="images/image-3.jpg" alt="Pepe 3"/></div>
+        <div class="gallery-item"><img src="images/image-4.jpg" alt="Pepe 4"/></div>
+        <div class="gallery-item"><img src="images/image-5.jpg" alt="Pepe 5"/></div>
+        <div class="gallery-item"><img src="images/image-6.jpg" alt="Pepe 6"/></div>
+        <div class="gallery-item"><img src="images/image-7.jpg" alt="Pepe 7"/></div>
+        <div class="gallery-item"><img src="images/image-8.jpg" alt="Pepe 8"/></div>
+        <div class="gallery-item"><img src="images/image-9.jpg" alt="Pepe 9"/></div>
+        <div class="gallery-item"><img src="images/image-10.jpg" alt="Pepe 10"/></div>
       </div>
     </section>
   </div>
-
-  <script>
-    function toggleNav() {
-      document.getElementById('mobileNav').classList.toggle('active');
-    }
-  </script>
-
 </body>
 </html>
