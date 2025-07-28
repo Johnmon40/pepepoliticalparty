@@ -3,138 +3,120 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Pepe Political Party - $PPP</title>
-  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Roboto:wght@300;700&display=swap" rel="stylesheet">
+  <title>Pepe Political Party</title>
   <style>
     body {
       margin: 0;
-      background: #0a0a0a;
-      font-family: 'Roboto', sans-serif;
-      color: white;
+      font-family: 'Arial', sans-serif;
+      background-color: #111;
+      color: #fff;
       display: flex;
     }
 
-    nav {
-      width: 230px;
-      background: #111;
-      padding: 30px 20px;
+    .sidebar {
+      width: 260px;
+      background-color: #000;
+      padding: 20px;
       border-right: 3px solid gold;
+      display: flex;
+      flex-direction: column;
       height: 100vh;
-      position: fixed;
-      top: 0;
-      left: 0;
-      overflow-y: auto;
+      box-sizing: border-box;
     }
 
-    nav h2 {
-      font-family: 'Anton', sans-serif;
+    .sidebar h1 {
+      font-size: 24px;
+      margin-bottom: 10px;
       color: gold;
-      text-align: center;
+    }
+
+    .sidebar h2 {
       font-size: 20px;
-      line-height: 1.2;
+      color: gold;
       margin-bottom: 30px;
     }
 
-    nav a {
-      display: block;
-      color: #ccc;
+    .nav-link {
+      color: white;
       text-decoration: none;
-      margin: 15px 0;
-      font-size: 1.1em;
-      transition: all 0.3s ease;
+      font-size: 18px;
+      margin: 10px 0;
+      display: flex;
+      align-items: center;
     }
 
-    nav a:hover {
+    .nav-link:hover {
       color: gold;
-      padding-left: 10px;
     }
 
-    .main {
-      margin-left: 230px;
-      padding: 40px 20px;
-      max-width: 900px;
+    .content {
+      flex: 1;
+      padding: 40px;
     }
 
-    h1 {
-      font-family: 'Anton', sans-serif;
-      font-size: 2.2em;
-      color: gold;
-      text-shadow: 0 0 10px gold;
-      margin-bottom: 20px;
+    .buy-button {
+      margin-top: auto;
+      padding: 15px;
+      background-color: gold;
+      color: black;
+      font-weight: bold;
+      text-align: center;
+      border-radius: 5px;
+      text-decoration: none;
     }
 
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 20px;
+    .buy-button:hover {
+      background-color: #ffd700;
     }
 
-    .gallery img {
-      width: 100%;
-      border: 3px solid gold;
-      border-radius: 10px;
-      box-shadow: 0 0 10px gold;
-      transition: transform 0.3s ease;
-    }
-
-    .gallery img:hover {
-      transform: scale(1.05);
-    }
-
-    @media (max-width: 768px) {
-      nav {
-        position: relative;
+    @media screen and (max-width: 768px) {
+      .sidebar {
         width: 100%;
         height: auto;
         border-right: none;
         border-bottom: 3px solid gold;
-        display: flex;
+        flex-direction: row;
         flex-wrap: wrap;
-        justify-content: center;
       }
 
-      nav h2 {
+      .nav-link {
+        flex: 1 1 45%;
+        margin: 5px 10px;
+      }
+
+      .buy-button {
         width: 100%;
-        font-size: 18px;
-        margin-bottom: 10px;
+        margin: 10px 0 0 0;
       }
 
-      nav a {
-        margin: 10px;
-        font-size: 0.95em;
-        padding: 5px 10px;
-      }
-
-      .main {
-        margin-left: 0;
+      .content {
+        padding: 20px;
       }
     }
   </style>
 </head>
 <body>
-  <nav>
-    <h2>Pepe Political Party<br>$PPP</h2>
-    <a href="index.html">🏛️ Home</a>
-    <a href="president.html">👑 President Pepe</a>
-    <a href="vicepresident.html">📘 VP Vibeshift</a>
-    <a href="firstlady.html">💄 First Lady Binnmaggot</a>
-    <a href="ministerofhealth.html">🍴 Minister of Health</a>
-    <a href="agriculture.html">🐐 Director of Agriculture & Livestock</a>
-    <a href="origins.html">📜 Origins</a>
-    <a href="#" onclick="alert('Coming Soon'); return false;">🛒 Buy Now</a>
-  </nav>
 
-  <div class="main">
-    <h1>🇺🇸 Welcome to the Pepe Political Party – $PPP</h1>
-    <p>The only party where memes lead, frogs rule, and your vote is cast in SOL.</p>
+  <div class="sidebar">
+    <h1>Pepe Political Party</h1>
+    <h2>$PPP</h2>
 
-    <div class="gallery">
-      <img src="images/pepe.jpg" alt="President Pepe">
-      <img src="images/vp.jpg" alt="Vice President Vibeshift">
-      <img src="images/firstlady.jpg" alt="First Lady Binnmaggot">
-      <img src="images/ministerofhealth.jpg" alt="Minister of Health Nixon">
-      <img src="images/parabolic.jpg" alt="Director of Agriculture Parabolic">
-    </div>
+    <a class="nav-link" href="index.html">🏛 Home</a>
+    <a class="nav-link" href="president.html">👑 President Pepe</a>
+    <a class="nav-link" href="vicepresident.html">📘 VP Vibeshift</a>
+    <a class="nav-link" href="firstlady.html">💄 First Lady Binnmaggot</a>
+    <a class="nav-link" href="agriculture.html">🌴 Director of Agriculture & Livestock</a>
+    <a class="nav-link" href="ministerofhealth.html">🥗 Minister of Health</a>
+    <a class="nav-link" href="origins.html">📜 Origins</a>
+
+    <a class="buy-button" href="#">🛒 Buy Now</a>
   </div>
+
+  <div class="content">
+    <h1>Welcome to the Pepe Political Party</h1>
+    <p>This is the official site of the $PPP — where memes lead and the blockchain follows.</p>
+    <p>Select a member from the left to learn about our administration.</p>
+  </div>
+
 </body>
 </html>
