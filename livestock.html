@@ -4,131 +4,153 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Director of Agriculture & Livestock</title>
-  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Roboto:wght@300;700&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
-      background: #0a0a0a;
-      font-family: 'Roboto', sans-serif;
-      color: white;
+      font-family: 'Arial', sans-serif;
+      background-color: #111;
+      color: #fff;
       display: flex;
     }
 
-    nav {
-      width: 230px;
-      background: #111;
-      padding: 30px 20px;
+    .sidebar {
+      width: 260px;
+      background-color: #000;
+      padding: 20px;
       border-right: 3px solid gold;
+      display: flex;
+      flex-direction: column;
       height: 100vh;
-      position: fixed;
-      top: 0;
-      left: 0;
-      overflow-y: auto;
+      box-sizing: border-box;
     }
 
-    nav h2 {
-      font-family: 'Anton', sans-serif;
+    .sidebar h1 {
+      font-size: 24px;
+      margin-bottom: 10px;
       color: gold;
-      text-align: center;
+    }
+
+    .sidebar h2 {
       font-size: 20px;
-      line-height: 1.2;
+      color: gold;
       margin-bottom: 30px;
     }
 
-    nav a {
-      display: block;
-      color: #ccc;
+    .nav-link {
+      color: white;
       text-decoration: none;
-      margin: 15px 0;
-      font-size: 1.1em;
-      transition: all 0.3s ease;
+      font-size: 18px;
+      margin: 10px 0;
+      display: flex;
+      align-items: center;
     }
 
-    nav a:hover {
+    .nav-link:hover {
       color: gold;
-      padding-left: 10px;
     }
 
-    .main {
-      margin-left: 230px;
-      padding: 40px 20px;
-      max-width: 900px;
+    .content {
+      flex: 1;
+      padding: 40px;
     }
 
-    h1 {
-      font-family: 'Anton', sans-serif;
-      font-size: 2.2em;
-      color: gold;
-      text-shadow: 0 0 10px gold;
-      margin-bottom: 20px;
+    .back-button {
+      display: inline-block;
+      margin-top: 30px;
+      background-color: gold;
+      color: black;
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-weight: bold;
+      text-decoration: none;
     }
 
-    img {
-      width: 100%;
-      max-width: 500px;
+    .minister-image {
       border: 3px solid gold;
       border-radius: 10px;
-      box-shadow: 0 0 20px gold;
-      margin-bottom: 20px;
+      max-width: 100%;
+      height: auto;
+      margin: 20px 0;
     }
 
-    p {
-      line-height: 1.6;
-      margin-bottom: 20px;
+    .buy-button {
+      margin-top: auto;
+      padding: 15px;
+      background-color: gold;
+      color: black;
+      font-weight: bold;
+      text-align: center;
+      border-radius: 5px;
+      text-decoration: none;
     }
 
-    @media (max-width: 768px) {
-      nav {
-        position: relative;
+    .buy-button:hover {
+      background-color: #ffd700;
+    }
+
+    @media screen and (max-width: 768px) {
+      .sidebar {
         width: 100%;
         height: auto;
         border-right: none;
         border-bottom: 3px solid gold;
-        display: flex;
+        flex-direction: row;
         flex-wrap: wrap;
-        justify-content: center;
       }
 
-      nav h2 {
+      .nav-link {
+        flex: 1 1 45%;
+        margin: 5px 10px;
+      }
+
+      .buy-button {
         width: 100%;
-        font-size: 18px;
-        margin-bottom: 10px;
+        margin: 10px 0 0 0;
       }
 
-      nav a {
-        margin: 10px;
-        font-size: 0.95em;
-        padding: 5px 10px;
-      }
-
-      .main {
-        margin-left: 0;
+      .content {
+        padding: 20px;
       }
     }
   </style>
 </head>
 <body>
-  <nav>
-    <h2>Pepe Political Party<br>$PPP</h2>
-    <a href="index.html">🏛️ Home</a>
-    <a href="president.html">👑 President Pepe</a>
-    <a href="vicepresident.html">📘 VP Vibeshift</a>
-    <a href="firstlady.html">💄 First Lady Binnmaggot</a>
-    <a href="ministerofhealth.html">🍴 Minister of Health</a>
-    <a href="agriculture.html">🐐 Director of Agriculture & Livestock</a>
-    <a href="origins.html">📜 Origins</a>
-    <a href="#" onclick="alert('Coming Soon'); return false;">🛒 Buy Now</a>
-  </nav>
 
-  <div class="main">
-    <h1>🐐 How Parabolic Got Elected - A Goat’s Journey to Greatness</h1>
+  <div class="sidebar">
+    <h1>Pepe Political Party</h1>
+    <h2>$PPP</h2>
 
-    <img src="images/parabolic.jpg" alt="Parabolic the Goat">
+    <a class="nav-link" href="index.html">🏛 Home</a>
+    <a class="nav-link" href="president.html">👑 President Pepe</a>
+    <a class="nav-link" href="vicepresident.html">📘 VP Vibeshift</a>
+    <a class="nav-link" href="firstlady.html">💄 First Lady Binnmaggot</a>
+    <a class="nav-link" href="agriculture.html">🌴 Director of Agriculture & Livestock</a>
+    <a class="nav-link" href="ministerofhealth.html">🥗 Minister of Health</a>
+    <a class="nav-link" href="origins.html">📜 Origins</a>
 
-    <p>When the farms were failing and the blockchain was bloated, Parabolic stepped up—horns polished, hooves planted, and eyes locked on yield curves.</p>
-    <p>This goat didn’t graze. He strategized. While others bought top and sold bottom, Parabolic cultivated a thriving digital farm on-chain and off.</p>
-    <p>With a single “BAAA,” he moved markets. With a double “BAAA-BAAA,” he secured farming subsidies for meme coin communities across the globe.</p>
-    <p>Now, as Director of Agriculture & Livestock, he ensures that every yield is green and every meme harvest bountiful.</p>
+    <a class="buy-button" href="#">🛒 Buy Now</a>
   </div>
+
+  <div class="content">
+    <h1>🌴 How Parabolic Got Elected - A Goat’s Journey to Greatness</h1>
+    <img src="images/parabolic.jpg" alt="Parabolic the Goat" class="minister-image">
+
+    <p>Parabolic wasn’t born into power—he was born in a barn behind an abandoned Solana validator farm.</p>
+
+    <p>From a young age, he showed an uncanny ability to predict bull runs by headbutting people at just the right moment. While others were learning TA, he was chewing grass and watching whale wallets move with goatlike instinct.</p>
+
+    <p>He once ate an entire farm bill and crapped out a decentralized food supply chain.</p>
+
+    <p>At the debates, he didn’t speak. He just stared, chewed hay, and the crowd roared with understanding. His silence was louder than most influencers’ podcasts.</p>
+
+    <p>When food prices soared, Parabolic didn’t panic. He bartered hay for Bitcoin and turned a goat pen into a permaculture paradise.</p>
+
+    <p>Voters say they didn’t choose Parabolic—he simply climbed the mountain and stood there waiting.</p>
+
+    <p>That’s how he became Director of Agriculture & Livestock: by chewing through the noise and growing something real.</p>
+
+    <a class="back-button" href="index.html">⬅ Back to Main Menu</a>
+  </div>
+
 </body>
 </html>
