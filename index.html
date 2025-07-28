@@ -10,27 +10,28 @@
       margin: 0;
       font-family: 'Roboto', sans-serif;
       background-color: #0a0a0a;
-      color: #fff;
+      color: white;
     }
 
     .sidebar {
       position: fixed;
       top: 0;
       left: 0;
-      width: 230px;
+      width: 240px;
       height: 100%;
       background-color: #111;
-      padding-top: 20px;
       border-right: 2px solid gold;
+      padding-top: 30px;
       z-index: 999;
     }
 
     .sidebar h2 {
       color: gold;
       font-family: 'Anton', sans-serif;
-      font-size: 20px;
+      font-size: 22px;
       text-align: center;
-      margin-bottom: 10px;
+      margin-bottom: 20px;
+      line-height: 1.3;
     }
 
     .sidebar a {
@@ -39,6 +40,7 @@
       padding: 12px 20px;
       text-decoration: none;
       font-size: 16px;
+      transition: background 0.2s;
     }
 
     .sidebar a:hover {
@@ -46,61 +48,73 @@
     }
 
     .content {
-      margin-left: 240px;
+      margin-left: 260px;
       padding: 40px 20px;
     }
 
     h1 {
       font-family: 'Anton', sans-serif;
-      font-size: 36px;
+      font-size: 40px;
       color: gold;
-      text-shadow: 0 0 10px gold;
+      text-shadow: 0 0 12px gold;
       margin-bottom: 20px;
     }
 
     p {
       font-size: 18px;
-      line-height: 1.7;
-      color: #eee;
-      margin-bottom: 20px;
+      line-height: 1.6;
+      color: #ddd;
+    }
+
+    .main-banner {
+      width: 100%;
+      max-width: 900px;
+      border: 3px solid gold;
+      margin-top: 20px;
+      border-radius: 12px;
     }
 
     .gallery {
       display: flex;
       flex-wrap: wrap;
-      justify-content: center;
       gap: 20px;
+      margin-top: 30px;
     }
 
     .gallery img {
+      width: 100%;
       max-width: 300px;
-      border: 3px solid gold;
       border-radius: 10px;
-      box-shadow: 0 0 15px gold;
+      border: 2px solid gold;
     }
 
     @media screen and (max-width: 768px) {
       .sidebar {
+        position: relative;
         width: 100%;
         height: auto;
-        position: relative;
         border-right: none;
         border-bottom: 2px solid gold;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
+        padding-bottom: 10px;
       }
+
       .sidebar a {
         display: inline-block;
-        padding: 10px 15px;
         font-size: 14px;
+        padding: 10px 14px;
       }
+
       .content {
         margin-left: 0;
         padding: 20px;
       }
-      .gallery img {
-        max-width: 90%;
+
+      .gallery {
+        justify-content: center;
+      }
+
+      .main-banner {
+        max-width: 100%;
       }
     }
   </style>
@@ -112,7 +126,7 @@
     <a href="president.html">👑 President Pepe</a>
     <a href="vicepresident.html">📘 VP Vibeshift</a>
     <a href="firstlady.html">🚨 First Lady Binnmaggot</a>
-    <a href="ministerofhealth.html">🧑‍⚕️ Minister of Health</a>
+    <a href="ministerofhealth.html">🥗 Minister of Health</a>
     <a href="agriculture.html">🐐 Director of Agriculture</a>
     <a href="origins.html">📜 Origins</a>
     <a href="#" onclick="alert('Coming Soon'); return false;">🛒 Buy Now</a>
@@ -120,12 +134,14 @@
 
   <div class="content">
     <h1>Pepe Political Party</h1>
-    <p>Memes. Movement. Momentum. Ticker: $PPP</p>
+    <p>Memes. Movement. Momentum. Ticker: <strong>$PPP</strong></p>
+    <img src="images/image-3.jpg" alt="Pepe Political Party Banner" class="main-banner">
+    
     <div class="gallery">
-      <img src="images/image-1.jpg" alt="Gallery Image 1">
-      <img src="images/image-2.jpg" alt="Gallery Image 2">
-      <img src="images/image-3.jpg" alt="Gallery Image 3">
-      <img src="images/image-4.jpg" alt="Gallery Image 4">
+      <img src="images/image-1.jpg" alt="PPP Image 1">
+      <img src="images/image-2.jpg" alt="PPP Image 2">
+      <img src="images/image-4.jpg" alt="PPP Image 3">
+      <img src="images/image-5.jpg" alt="PPP Image 4">
     </div>
   </div>
 </body>
