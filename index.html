@@ -17,19 +17,8 @@
       background-color: #000;
       color: #fff;
       display: flex;
+      flex-direction: row;
       min-height: 100vh;
-    }
-
-    header {
-      background-color: gold;
-      color: black;
-      text-align: center;
-      padding: 30px 20px;
-      font-family: 'Playfair Display', serif;
-      font-size: 2.5em;
-      letter-spacing: 2px;
-      font-weight: bold;
-      width: 100%;
     }
 
     #sidebar {
@@ -53,14 +42,25 @@
       font-size: 1.1em;
     }
 
-    #content {
+    #sidebarToggle {
+      display: none;
+    }
+
+    #main {
       flex: 1;
       padding: 20px;
     }
 
-    /* Mobile Styles */
-    #sidebarToggle {
-      display: none;
+    header {
+      background-color: gold;
+      color: black;
+      text-align: center;
+      padding: 30px 20px;
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5em;
+      letter-spacing: 2px;
+      font-weight: bold;
+      width: 100%;
     }
 
     @media screen and (max-width: 768px) {
@@ -73,7 +73,7 @@
         top: 0;
         left: 0;
         width: 70vw;
-        height: 100%;
+        height: 100vh;
         transform: translateX(-100%);
         transition: transform 0.3s ease-in-out;
         z-index: 999;
@@ -97,7 +97,7 @@
         border-radius: 5px;
       }
 
-      #content {
+      #main {
         padding-top: 60px;
       }
 
@@ -124,10 +124,8 @@
     <a href="origins.html">Origins</a>
   </div>
 
-  <div id="content">
-    <header>
-      Pepe Political Party — $PPP
-    </header>
+  <div id="main">
+    <header>Pepe Political Party — $PPP</header>
     <main>
       <p style="margin-top: 20px; font-size: 1.2em;">
         Welcome to the official website of the Pepe Political Party — a movement of memes, money, and mayhem.
@@ -146,3 +144,4 @@
 
 </body>
 </html>
+
