@@ -3,118 +3,132 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Director of Agriculture & Livestock – Pepe Political Party</title>
+  <title>Director of Agriculture & Livestock</title>
   <link href="https://fonts.googleapis.com/css2?family=Anton&family=Roboto:wght@300;700&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
+      background: #0a0a0a;
       font-family: 'Roboto', sans-serif;
-      background-color: #0a0a0a;
-      color: #fff;
+      color: white;
+      display: flex;
     }
 
-    .sidebar {
+    nav {
+      width: 230px;
+      background: #111;
+      padding: 30px 20px;
+      border-right: 3px solid gold;
+      height: 100vh;
       position: fixed;
       top: 0;
       left: 0;
-      width: 230px;
-      height: 100%;
-      background-color: #111;
-      padding-top: 20px;
-      border-right: 2px solid gold;
-      z-index: 999;
+      overflow-y: auto;
     }
 
-    .sidebar h2 {
-      color: gold;
+    nav h2 {
       font-family: 'Anton', sans-serif;
-      font-size: 20px;
+      color: gold;
       text-align: center;
-      margin-bottom: 10px;
+      font-size: 20px;
+      line-height: 1.2;
+      margin-bottom: 30px;
     }
 
-    .sidebar a {
+    nav a {
       display: block;
-      color: white;
-      padding: 12px 20px;
+      color: #ccc;
       text-decoration: none;
-      font-size: 16px;
+      margin: 15px 0;
+      font-size: 1.1em;
+      transition: all 0.3s ease;
     }
 
-    .sidebar a:hover {
-      background-color: #333;
+    nav a:hover {
+      color: gold;
+      padding-left: 10px;
     }
 
-    .content {
-      margin-left: 240px;
+    .main {
+      margin-left: 230px;
       padding: 40px 20px;
-      max-width: 800px;
+      max-width: 900px;
     }
 
     h1 {
       font-family: 'Anton', sans-serif;
-      font-size: 32px;
+      font-size: 2.2em;
       color: gold;
       text-shadow: 0 0 10px gold;
       margin-bottom: 20px;
     }
 
-    p {
-      font-size: 18px;
-      line-height: 1.7;
-      color: #eee;
+    img {
+      width: 100%;
+      max-width: 500px;
+      border: 3px solid gold;
+      border-radius: 10px;
+      box-shadow: 0 0 20px gold;
       margin-bottom: 20px;
     }
 
-    img {
-      max-width: 100%;
-      height: auto;
-      border: 2px solid gold;
-      border-radius: 10px;
-      margin-bottom: 30px;
+    p {
+      line-height: 1.6;
+      margin-bottom: 20px;
     }
 
-    @media screen and (max-width: 768px) {
-      .sidebar {
+    @media (max-width: 768px) {
+      nav {
+        position: relative;
         width: 100%;
         height: auto;
-        position: relative;
         border-right: none;
-        border-bottom: 2px solid gold;
+        border-bottom: 3px solid gold;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
       }
-      .sidebar a {
-        display: inline-block;
-        padding: 10px 15px;
-        font-size: 14px;
+
+      nav h2 {
+        width: 100%;
+        font-size: 18px;
+        margin-bottom: 10px;
       }
-      .content {
+
+      nav a {
+        margin: 10px;
+        font-size: 0.95em;
+        padding: 5px 10px;
+      }
+
+      .main {
         margin-left: 0;
-        padding: 20px;
       }
     }
   </style>
 </head>
 <body>
-  <div class="sidebar">
+  <nav>
     <h2>Pepe Political Party<br>$PPP</h2>
     <a href="index.html">🏛️ Home</a>
     <a href="president.html">👑 President Pepe</a>
     <a href="vicepresident.html">📘 VP Vibeshift</a>
     <a href="firstlady.html">💄 First Lady Binnmaggot</a>
     <a href="ministerofhealth.html">🍴 Minister of Health</a>
-    <a href="livestock.html">🐐 Agriculture & Livestock</a>
+    <a href="agriculture.html">🐐 Director of Agriculture & Livestock</a>
     <a href="origins.html">📜 Origins</a>
     <a href="#" onclick="alert('Coming Soon'); return false;">🛒 Buy Now</a>
-  </div>
+  </nav>
 
-  <div class="content">
-    <img src="images/livestock.jpg" alt="Director of Agriculture & Livestock - Parabolic" />
-    <h1>How Parabolic Got Elected – A Goat’s Journey to Greatness</h1>
-    <p><strong>He didn’t run a campaign—he galloped.</strong></p>
-    <p>Parabolic wasn’t your average candidate. He didn’t shake hands. He headbutted charts. At every rally, he’d just hop on stage, scream “BAAAAHHH” for five minutes straight, and drop an ancient meme from the blockchain archives that somehow made perfect sense. The crowd went wild every time.</p>
-    <p>He’s a total degen, raised in the rugged hills of shitcoin Twitter. He doesn’t read policy—he reads sentiment. He doesn’t write speeches—he sends cursed Telegram stickers. And every meme he posts? Certified OG lore.</p>
-    <p>How did he win? Simple. He found a meme so rare, so holy, it made every DAO simultaneously vote “YES” and then collapse from euphoria.</p>
-    <p>Now he’s the Parabolic Director of Agriculture & Livestock. And yes—he still baahs in every cabinet meeting.</p>
+  <div class="main">
+    <h1>🐐 How Parabolic Got Elected - A Goat’s Journey to Greatness</h1>
+
+    <img src="images/parabolic.jpg" alt="Parabolic the Goat">
+
+    <p>When the farms were failing and the blockchain was bloated, Parabolic stepped up—horns polished, hooves planted, and eyes locked on yield curves.</p>
+    <p>This goat didn’t graze. He strategized. While others bought top and sold bottom, Parabolic cultivated a thriving digital farm on-chain and off.</p>
+    <p>With a single “BAAA,” he moved markets. With a double “BAAA-BAAA,” he secured farming subsidies for meme coin communities across the globe.</p>
+    <p>Now, as Director of Agriculture & Livestock, he ensures that every yield is green and every meme harvest bountiful.</p>
   </div>
 </body>
 </html>
