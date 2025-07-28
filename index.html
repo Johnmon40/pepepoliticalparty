@@ -4,32 +4,52 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Pepe Political Party - $PPP</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto&display=swap" rel="stylesheet">
   <style>
-    body {
+    * {
+      box-sizing: border-box;
       margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: black;
-      color: white;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #000;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
     }
 
     header {
       background-color: gold;
       color: black;
-      padding: 20px;
       text-align: center;
+      padding: 30px 20px;
+      font-family: 'Playfair Display', serif;
       font-size: 2.5em;
+      letter-spacing: 2px;
       font-weight: bold;
+    }
+
+    #sidebarToggle {
+      display: none;
+      background-color: gold;
+      color: black;
+      border: none;
+      font-size: 1.2em;
+      padding: 10px 15px;
+      position: fixed;
+      top: 10px;
+      left: 10px;
+      z-index: 1001;
+      border-radius: 5px;
     }
 
     #sidebar {
       background-color: #111;
       width: 250px;
-      position: fixed;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      overflow-y: auto;
       padding: 20px;
+      min-height: 100vh;
       border-right: 3px solid gold;
     }
 
@@ -42,47 +62,51 @@
     #sidebar a {
       display: block;
       color: white;
-      padding: 10px 0;
       text-decoration: none;
+      margin-bottom: 15px;
       font-size: 1.1em;
     }
 
-    #sidebar a:hover {
-      color: gold;
-    }
-
-    main {
-      margin-left: 270px;
+    #content {
+      flex: 1;
       padding: 20px;
     }
 
-    .banner {
-      width: 100%;
-      max-width: 1000px;
-      margin-bottom: 20px;
-      border: 5px solid gold;
-      border-radius: 15px;
-    }
+    @media screen and (max-width: 768px) {
+      body {
+        flex-direction: column;
+      }
 
-    .intro {
-      font-size: 1.2em;
-      margin: 20px 0;
-    }
+      #sidebar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 70vw;
+        background-color: #111;
+        height: 100%;
+        transform: translateX(-100%);
+        transition: transform 0.3s ease;
+        z-index: 1000;
+      }
 
-    .gallery {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-    }
+      #sidebar.active {
+        transform: translateX(0);
+      }
 
-    .gallery img {
-      width: 300px;
-      border: 4px solid gold;
-      border-radius: 12px;
+      #sidebarToggle {
+        display: block;
+      }
+
+      #content {
+        margin-left: 0;
+      }
     }
   </style>
 </head>
 <body>
+
+  <button id="sidebarToggle">☰ Menu</button>
+
   <div id="sidebar">
     <h2>Pepe Political Party</h2>
     <a href="index.html">$PPP Home</a>
@@ -95,24 +119,26 @@
     <a href="origins.html">Origins</a>
   </div>
 
-  <main>
-    <header>$PPP – Pepe Political Party</header>
-    <img src="images/banner.jpg" alt="Main Banner" class="banner" />
-    <div class="intro">
-      Welcome to the official website of the Pepe Political Party — a movement of memes, mayhem, and moon missions. Meet our leaders, read their bios, and explore the glorious $PPP revolution.
-    </div>
-    <div class="gallery">
-      <img src="images/image-1.jpg" alt="Image 1" />
-      <img src="images/image-2.jpg" alt="Image 2" />
-      <img src="images/image-3.jpg" alt="Image 3" />
-      <img src="images/image-4.jpg" alt="Image 4" />
-      <img src="images/image-5.jpg" alt="Image 5" />
-      <img src="images/image-6.jpg" alt="Image 6" />
-      <img src="images/image-7.jpg" alt="Image 7" />
-      <img src="images/image-8.jpg" alt="Image 8" />
-      <img src="images/image-9.jpg" alt="Image 9" />
-      <img src="images/image-10.jpg" alt="Image 10" />
-    </div>
-  </main>
+  <div id="content">
+    <header>
+      Pepe Political Party — $PPP
+    </header>
+    <main>
+      <p style="margin-top: 20px; font-size: 1.2em;">
+        Welcome to the official website of the Pepe Political Party — a movement of memes, money, and mayhem.
+      </p>
+      <img src="banner.jpeg" alt="Pepe Political Banner" style="width: 100%; margin-top: 20px; border: 3px solid gold;">
+      <!-- Add your image gallery or content here -->
+    </main>
+  </div>
+
+  <script>
+    const toggleBtn = document.getElementById("sidebarToggle");
+    const sidebar = document.getElementById("sidebar");
+    toggleBtn.addEventListener("click", () => {
+      sidebar.classList.toggle("active");
+    });
+  </script>
+
 </body>
 </html>
