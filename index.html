@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Minister of Health – Nixon</title>
+  <title>Pepe Political Party – $PPP</title>
   <link href="https://fonts.googleapis.com/css2?family=Anton&family=Roboto:wght@300;700&display=swap" rel="stylesheet">
   <style>
     body {
@@ -13,10 +13,41 @@
       color: #fff;
     }
 
-    .container {
-      max-width: 900px;
-      margin: auto;
-      padding: 30px 20px;
+    .sidebar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 230px;
+      height: 100%;
+      background-color: #111;
+      padding-top: 20px;
+      border-right: 2px solid gold;
+      z-index: 999;
+    }
+
+    .sidebar h2 {
+      color: gold;
+      font-family: 'Anton', sans-serif;
+      font-size: 20px;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    .sidebar a {
+      display: block;
+      color: white;
+      padding: 12px 20px;
+      text-decoration: none;
+      font-size: 16px;
+    }
+
+    .sidebar a:hover {
+      background-color: #333;
+    }
+
+    .content {
+      margin-left: 240px;
+      padding: 40px 20px;
     }
 
     h1 {
@@ -34,58 +65,68 @@
       margin-bottom: 20px;
     }
 
-    img {
-      max-width: 100%;
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .gallery img {
+      max-width: 300px;
       border: 3px solid gold;
-      border-radius: 12px;
-      margin-bottom: 25px;
-    }
-
-    .back-button {
-      display: inline-block;
-      margin-top: 30px;
-      padding: 10px 16px;
-      background-color: gold;
-      color: #000;
-      text-decoration: none;
-      border-radius: 8px;
-      font-weight: bold;
-      transition: background-color 0.3s;
-    }
-
-    .back-button:hover {
-      background-color: #ffd700;
+      border-radius: 10px;
+      box-shadow: 0 0 15px gold;
     }
 
     @media screen and (max-width: 768px) {
-      h1 {
-        font-size: 28px;
+      .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        border-right: none;
+        border-bottom: 2px solid gold;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
       }
-
-      p {
-        font-size: 16px;
+      .sidebar a {
+        display: inline-block;
+        padding: 10px 15px;
+        font-size: 14px;
       }
-
-      .container {
-        padding: 20px 15px;
+      .content {
+        margin-left: 0;
+        padding: 20px;
+      }
+      .gallery img {
+        max-width: 90%;
       }
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>🥗 Minister of Health: Nixon</h1>
-    <img src="ministerofhealth.jpg" alt="Minister of Health Nixon">
-    
-    <p><strong>How Nixon Got Elected – The Meme Chef of the Pepe Political Party</strong></p>
-    <p>While other candidates were kissing babies, Nixon was chopping wood, roofing houses, running the local meme bar—and still finding time to drop world-class memes that made even the most jaded shitcoiners whisper “based.”</p>
-    <p>He didn’t just out-meme the world. He out-lived it.</p>
-    <p>Every meme he posted felt like it was forged in the fires of crypto lore and seasoned with sarcasm. But behind the shitposts and the smoke was a man with unmatched hustle and—most importantly—a salad game so strong it had enemies asking for seconds.</p>
-    <p>By day, he crafted memes sharper than a chainlink fudder’s tears. By night, he grilled tacos so divine even Satoshi would’ve unmasked just for a bite. His kitchen? Pure chaos. Flames, spice, laughter, and somehow, perfectly plated beauty every time.</p>
-    <p>In the end, it wasn’t just the memes or the hammer or the rooftop bar vibes. It was the cilantro-lime sauce.</p>
-    <p>And that’s how Nixon became Minister of Health—because nothing heals a nation like a damn good taco.</p>
+  <div class="sidebar">
+    <h2>Pepe Political Party<br>$PPP</h2>
+    <a href="index.html">🏛️ Home</a>
+    <a href="president.html">👑 President Pepe</a>
+    <a href="vicepresident.html">📘 VP Vibeshift</a>
+    <a href="firstlady.html">🚨 First Lady Binnmaggot</a>
+    <a href="ministerofhealth.html">🧑‍⚕️ Minister of Health</a>
+    <a href="agriculture.html">🐐 Director of Agriculture</a>
+    <a href="origins.html">📜 Origins</a>
+    <a href="#" onclick="alert('Coming Soon'); return false;">🛒 Buy Now</a>
+  </div>
 
-    <a class="back-button" href="index.html">← Back to Main Menu</a>
+  <div class="content">
+    <h1>Pepe Political Party</h1>
+    <p>Memes. Movement. Momentum. Ticker: $PPP</p>
+    <div class="gallery">
+      <img src="images/image-1.jpg" alt="Gallery Image 1">
+      <img src="images/image-2.jpg" alt="Gallery Image 2">
+      <img src="images/image-3.jpg" alt="Gallery Image 3">
+      <img src="images/image-4.jpg" alt="Gallery Image 4">
+    </div>
   </div>
 </body>
 </html>
