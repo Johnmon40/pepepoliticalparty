@@ -26,6 +26,7 @@
       width: 250px;
       padding: 20px;
       border-right: 3px solid gold;
+      flex-shrink: 0;
     }
 
     #sidebar h2 {
@@ -42,25 +43,49 @@
       font-size: 1.1em;
     }
 
+    #sidebar a:hover {
+      text-decoration: underline;
+    }
+
     #sidebarToggle {
       display: none;
     }
 
     #main {
       flex: 1;
-      padding: 20px;
+      padding: 0;
     }
 
     header {
       background-color: gold;
       color: black;
       text-align: center;
-      padding: 30px 20px;
+      padding: 20px;
       font-family: 'Playfair Display', serif;
-      font-size: 2.5em;
-      letter-spacing: 2px;
+      font-size: 2em;
       font-weight: bold;
+      border-bottom: 5px solid black;
+    }
+
+    .banner {
       width: 100%;
+      border: 5px solid gold;
+      border-radius: 10px;
+      margin: 20px auto;
+      display: block;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .gallery img {
+      width: 100%;
+      border: 4px solid gold;
+      border-radius: 10px;
     }
 
     @media screen and (max-width: 768px) {
@@ -73,10 +98,10 @@
         top: 0;
         left: 0;
         width: 70vw;
-        height: 100vh;
+        height: 100%;
         transform: translateX(-100%);
-        transition: transform 0.3s ease-in-out;
-        z-index: 999;
+        transition: transform 0.3s ease;
+        z-index: 1000;
       }
 
       #sidebar.active {
@@ -93,7 +118,7 @@
         position: fixed;
         top: 10px;
         left: 10px;
-        z-index: 1000;
+        z-index: 1001;
         border-radius: 5px;
       }
 
@@ -102,8 +127,7 @@
       }
 
       header {
-        font-size: 2em;
-        padding: 20px;
+        font-size: 1.5em;
       }
     }
   </style>
@@ -114,24 +138,25 @@
 
   <div id="sidebar">
     <h2>Pepe Political Party</h2>
-    <a href="index.html">$PPP Home</a>
+    <a href="index.html">$PPP</a>
     <a href="president.html">President Pepe</a>
     <a href="vicepresident.html">Vice President Vibeshift</a>
     <a href="firstlady.html">First Lady Binnmaggot</a>
-    <a href="ministerofhealth.html">Minister of Health</a>
-    <a href="livestock.html">Director of Agriculture & Livestock</a>
-    <a href="chiefofstaff.html">Chief of Staff</a>
     <a href="origins.html">Origins</a>
+    <a href="#">Buy Now</a>
   </div>
 
   <div id="main">
-    <header>Pepe Political Party — $PPP</header>
-    <main>
-      <p style="margin-top: 20px; font-size: 1.2em;">
-        Welcome to the official website of the Pepe Political Party — a movement of memes, money, and mayhem.
-      </p>
-      <img src="banner.jpeg" alt="Pepe Political Banner" style="width: 100%; margin-top: 20px; border: 3px solid gold;">
-    </main>
+    <header>Welcome to the Pepe Political Party</header>
+
+    <img src="banner.jpeg" alt="Pepe Political Banner" class="banner">
+
+    <div class="gallery">
+      <img src="image1.jpeg" alt="Image 1">
+      <img src="image2.jpeg" alt="Image 2">
+      <img src="image3.jpeg" alt="Image 3">
+      <!-- Add more images as needed -->
+    </div>
   </div>
 
   <script>
@@ -144,4 +169,5 @@
 
 </body>
 </html>
+
 
