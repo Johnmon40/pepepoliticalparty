@@ -4,77 +4,196 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Pepe Political Party</title>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Roboto&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Roboto:wght@300;700&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
+      background: #0a0a0a;
       font-family: 'Roboto', sans-serif;
-      background-color: #000;
-      color: white;
+      color: #fff;
+      display: flex;
+      flex-direction: row;
     }
-    .sidebar {
-      height: 100vh;
-      width: 250px;
-      background-color: #111;
-      position: fixed;
-      overflow-y: auto;
-      padding-top: 20px;
+
+    nav {
+      width: 230px;
+      background: #111;
+      padding: 30px 20px;
       border-right: 3px solid gold;
+      height: 100vh;
+      position: fixed;
+      top: 0;
+      left: 0;
+      overflow-y: auto;
     }
-    .sidebar h2 {
+
+    nav h2 {
+      font-family: 'Anton', sans-serif;
       color: gold;
       text-align: center;
-      margin: 10px 0;
+      font-size: 20px;
+      line-height: 1.2;
+      margin-bottom: 30px;
     }
-    .sidebar a {
+
+    nav a {
       display: block;
-      padding: 12px 24px;
+      color: #ccc;
       text-decoration: none;
-      color: white;
-      font-size: 18px;
-      border-bottom: 1px solid #222;
+      margin: 15px 0;
+      font-size: 1.1em;
+      transition: all 0.3s ease;
     }
-    .sidebar a:hover {
-      background-color: #444;
+
+    nav a:hover {
+      color: gold;
+      padding-left: 10px;
     }
-    .main-content {
-      margin-left: 250px;
-      padding: 40px;
+
+    .main {
+      margin-left: 230px;
+      width: calc(100% - 230px);
     }
-    .button {
-      background-color: gold;
-      border: none;
-      padding: 10px 20px;
-      color: black;
-      font-weight: bold;
-      font-size: 18px;
-      cursor: pointer;
-      margin-top: 30px;
+
+    header {
+      text-align: center;
+      padding: 50px 20px 30px;
+      background: #000;
+      box-shadow: 0 0 30px gold;
     }
-    .button:hover {
-      background-color: #ffc800;
+
+    header h1 {
+      font-family: 'Anton', sans-serif;
+      font-size: 3em;
+      color: gold;
+      text-shadow: 0 0 15px gold;
+      margin: 0;
+    }
+
+    header p {
+      font-size: 1.2em;
+      color: #ccc;
+      margin-top: 10px;
+      letter-spacing: 1px;
+    }
+
+    .banner {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: cover;
+      border-top: 4px solid gold;
+      border-bottom: 4px solid gold;
+      background-color: #000;
+    }
+
+    .gallery-section {
+      padding: 50px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 25px;
+    }
+
+    .gallery-item {
+      width: 250px;
+      background: #111;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 0 15px gold;
+      transition: transform 0.3s ease;
+      border: 2px solid gold;
+    }
+
+    .gallery-item:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 30px gold;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      display: block;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        position: relative;
+        width: 100%;
+        height: auto;
+        border-right: none;
+        border-bottom: 3px solid gold;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      nav h2 {
+        width: 100%;
+        font-size: 18px;
+        margin-bottom: 10px;
+      }
+
+      nav a {
+        margin: 10px;
+        font-size: 0.95em;
+        padding: 5px 10px;
+      }
+
+      .main {
+        margin-left: 0;
+        width: 100%;
+      }
+
+      .gallery-item {
+        width: 100%;
+        max-width: 320px;
+      }
     }
   </style>
 </head>
+
 <body>
+  <nav>
+    <h2>Pepe Political Party<br>$PPP</h2>
+    <a href="index.html">🏛️ Home</a>
+    <a href="president.html">👑 President Pepe</a>
+    <a href="vicepresident.html">📘 VP Vibeshift</a>
+    <a href="firstlady.html">💄 First Lady Binnmaggot</a>
+    <a href="ministerofhealth.html">🍴 Minister of Health</a>
+    <a href="livestock.html">🐐 Agriculture & Livestock</a>
+    <a href="origins.html">📜 Origins</a>
+    <a href="#" onclick="alert('Coming Soon'); return false;">🛒 Buy Now</a>
+  </nav>
 
-<div class="sidebar">
-  <h2>Pepe Political Party<br>$PPP</h2>
-  <a href="index.html">🏛 Home</a>
-  <a href="president.html">👑 President Pepe</a>
-  <a href="vicepresident.html">📘 VP Vibeshift</a>
-  <a href="firstlady.html">💄 First Lady Binnmaggot</a>
-  <a href="agriculture.html">🌴 Director of Agriculture & Livestock</a>
-  <a href="ministerofhealth.html">🥗 Minister of Health</a>
-  <a href="origins.html">📜 Origins</a>
-  <a href="#buy" class="button">Buy Now</a>
-</div>
+  <div class="main">
+    <header>
+      <h1>Pepe Political Party</h1>
+      <p>Memes. Movement. Momentum. Ticker: $PPP</p>
+    </header>
 
-<div class="main-content">
-  <h1 style="font-family: 'Orbitron', sans-serif; font-size: 36px; color: gold;">Welcome to the Official Pepe Political Party</h1>
-  <p>The future of meme governance starts here. Join the $PPP revolution and vote with your SOL.</p>
-  <img src="images/pepe.jpg" alt="President Pepe" style="max-width: 100%; margin-top: 20px; border: 2px solid gold;" />
-</div>
+    <img src="images/image-8.jpg" alt="Pepe Political Banner" class="banner"/>
 
+    <section class="gallery-section">
+      <div class="gallery">
+        <div class="gallery-item"><img src="images/image-1.jpg" alt="Pepe 1"/></div>
+        <div class="gallery-item"><img src="images/image-2.jpg" alt="Pepe 2"/></div>
+        <div class="gallery-item"><img src="images/image-3.jpg" alt="Pepe 3"/></div>
+        <div class="gallery-item"><img src="images/image-4.jpg" alt="Pepe 4"/></div>
+        <div class="gallery-item"><img src="images/image-5.jpg" alt="Pepe 5"/></div>
+        <div class="gallery-item"><img src="images/image-6.jpg" alt="Pepe 6"/></div>
+        <div class="gallery-item"><img src="images/image-7.jpg" alt="Pepe 7"/></div>
+        <div class="gallery-item"><img src="images/image-8.jpg" alt="Pepe 8"/></div>
+        <div class="gallery-item"><img src="images/image-9.jpg" alt="Pepe 9"/></div>
+        <div class="gallery-item"><img src="images/image-10.jpg" alt="Pepe 10"/></div>
+      </div>
+    </section>
+  </div>
 </body>
 </html>
