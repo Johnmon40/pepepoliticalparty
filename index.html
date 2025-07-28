@@ -3,97 +3,81 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Pepe Political Party – $PPP</title>
-  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Roboto:wght@300;700&display=swap" rel="stylesheet">
+  <title>Pepe Political Party</title>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
-      font-family: 'Roboto', sans-serif;
-      background-color: #0a0a0a;
+      font-family: Arial, sans-serif;
+      background-color: black;
       color: white;
     }
-
     .sidebar {
+      height: 100vh;
+      width: 250px;
       position: fixed;
       top: 0;
       left: 0;
-      width: 230px;
-      height: 100%;
       background-color: #111;
       padding-top: 20px;
-      border-right: 2px solid gold;
-      z-index: 999;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
     }
-
-    .sidebar h2 {
-      color: gold;
-      font-family: 'Anton', sans-serif;
-      font-size: 22px;
-      text-align: center;
-      margin-bottom: 10px;
-    }
-
     .sidebar a {
-      display: block;
-      color: white;
-      padding: 12px 20px;
+      padding: 15px 25px;
       text-decoration: none;
-      font-size: 16px;
-    }
-
-    .sidebar a:hover {
-      background-color: #333;
-    }
-
-    .content {
-      margin-left: 240px;
-      padding: 40px 20px;
-    }
-
-    .banner {
-      width: 100%;
-      height: auto;
+      font-size: 18px;
+      color: white;
       display: block;
+      transition: 0.3s;
     }
-
-    @media screen and (max-width: 768px) {
-      .sidebar {
-        width: 100%;
-        height: auto;
-        position: relative;
-        border-right: none;
-        border-bottom: 2px solid gold;
-      }
-      .sidebar a {
-        display: inline-block;
-        padding: 10px 15px;
-        font-size: 14px;
-      }
-      .content {
-        margin-left: 0;
-        padding: 20px;
-      }
+    .sidebar a:hover {
+      background-color: #575757;
+    }
+    .main-content {
+      margin-left: 250px;
+      padding: 20px;
+    }
+    .logo {
+      font-size: 24px;
+      text-align: center;
+      margin-bottom: 20px;
+      color: gold;
+      font-family: 'Archivo Black', sans-serif;
+    }
+    .button-buy {
+      background-color: gold;
+      color: black;
+      font-weight: bold;
+      text-align: center;
+      padding: 15px;
+      text-decoration: none;
+      display: block;
+      margin: 20px;
     }
   </style>
 </head>
 <body>
+
   <div class="sidebar">
-    <h2>Pepe Political Party<br>$PPP</h2>
-    <a href="index.html">🏛️ Home</a>
-    <a href="president.html">👑 President Pepe</a>
-    <a href="vicepresident.html">📘 VP Vibeshift</a>
-    <a href="firstlady.html">💄 First Lady Binnmaggot</a>
-    <a href="ministerofhealth.html">🥗 Minister of Health</a>
-    <a href="agriculture.html">🐐 Director of Agriculture</a>
-    <a href="origins.html">📜 Origins</a>
-    <a href="#" onclick="alert('Coming Soon'); return false;">🛒 Buy Now</a>
+    <div>
+      <div class="logo">🏛️ Pepe Political Party</div>
+      <a href="index.html">🏠 Home</a>
+      <a href="president.html">👑 President Pepe</a>
+      <a href="vicepresident.html">📘 VP Vibeshift</a>
+      <a href="firstlady.html">🚨 First Lady Binnmaggot</a>
+      <a href="agriculture.html">🌴 Director of Agriculture & Livestock</a>
+      <a href="ministerofhealth.html">🥗 Minister of Health</a>
+      <a href="origins.html">📜 Origins</a>
+    </div>
+    <a class="button-buy" href="#">🛒 Buy Now</a>
   </div>
 
-  <div class="content">
-    <img src="images/banner.png" alt="Main Banner" class="banner" />
-    <h1>Welcome to the Pepe Political Party!</h1>
-    <p>The $PPP isn’t just a coin—it's a revolution wrapped in a meme. Join President Pepe and his elite cabinet as they guide us to glory on the blockchain and beyond.</p>
-    <p>Explore each department to see why we’re not just decentralized—we’re destiny.</p>
+  <div class="main-content">
+    <h1>Welcome to the Pepe Political Party</h1>
+    <p>This is the official site of the $PPP movement. Navigate through the sidebar to learn about our glorious leadership and how we plan to meme our way to victory.</p>
   </div>
+
 </body>
 </html>
