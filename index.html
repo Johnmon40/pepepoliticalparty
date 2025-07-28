@@ -3,42 +3,33 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Pepe Political Party - $PPP</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto&display=swap" rel="stylesheet">
+  <title>Pepe Political Party</title>
   <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
     body {
-      font-family: 'Roboto', sans-serif;
-      background-color: #000;
-      color: #fff;
-      display: flex;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: black;
+      color: white;
     }
 
     header {
       background-color: gold;
       color: black;
+      padding: 20px;
       text-align: center;
-      padding: 30px 20px;
-      font-family: 'Playfair Display', serif;
       font-size: 2.5em;
-      letter-spacing: 2px;
       font-weight: bold;
-      width: 100%;
     }
 
     #sidebar {
       background-color: #111;
       width: 250px;
-      padding: 20px;
       position: fixed;
       top: 0;
       bottom: 0;
+      left: 0;
       overflow-y: auto;
+      padding: 20px;
       border-right: 3px solid gold;
     }
 
@@ -46,7 +37,6 @@
       color: gold;
       font-size: 1.5em;
       margin-bottom: 20px;
-      font-family: 'Playfair Display', serif;
     }
 
     #sidebar a {
@@ -63,27 +53,26 @@
 
     main {
       margin-left: 270px;
-      padding: 30px;
-      flex-grow: 1;
+      padding: 20px;
     }
 
-    .intro {
-      font-size: 1.4em;
-      line-height: 1.6;
-      margin-top: 20px;
+    .banner {
+      width: 100%;
+      max-width: 1000px;
+      margin-bottom: 20px;
+      border: 5px solid gold;
+      border-radius: 15px;
     }
 
     .gallery {
       display: flex;
       flex-wrap: wrap;
       gap: 20px;
-      margin-top: 30px;
     }
 
     .gallery img {
-      max-width: 300px;
-      width: 100%;
-      border: 3px solid gold;
+      width: 300px;
+      border: 4px solid gold;
       border-radius: 12px;
     }
   </style>
@@ -102,19 +91,15 @@
   </div>
 
   <main>
-    <header>$PPP - Pepe Political Party</header>
-    <div class="intro">
-      Welcome to the official website of the Pepe Political Party — a movement of memes, mayhem, and moon missions. Meet our leaders, read their bios, and explore the glorious $PPP revolution.
-    </div>
-
+    <header>Welcome to the Pepe Political Party</header>
+    <img src="images/banner.jpg" alt="Main Banner" class="banner" />
     <div class="gallery">
-  <img src="images/pepe.jpg" alt="President Pepe">
-  <img src="images/vp.jpg" alt="Vice President Vibeshift">
-  <img src="images/firstlady.jpg" alt="First Lady Binnmaggot">
-  <img src="images/nixon-health.jpg" alt="Minister of Health">
-  <img src="images/parabolic.jpg" alt="Director of Agriculture & Livestock">
-</div>
-
+      <img src="images/pepe.jpg" alt="President Pepe" />
+      <img src="images/vp.jpg" alt="Vice President Vibeshift" />
+      <img src="images/firstlady.jpg" alt="First Lady Binnmaggot" />
+      <img src="images/nixon-health.jpg" alt="Minister of Health" />
+      <img src="images/parabolic.jpg" alt="Director of Agriculture & Livestock" />
+    </div>
   </main>
 </body>
 </html>
