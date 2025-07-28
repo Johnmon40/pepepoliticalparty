@@ -4,97 +4,76 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Pepe Political Party</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Roboto&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
       font-family: 'Roboto', sans-serif;
-      background-color: #111;
-      color: #fff;
+      background-color: #000;
+      color: white;
     }
-
     .sidebar {
       height: 100vh;
       width: 250px;
+      background-color: #111;
       position: fixed;
-      background-color: #000;
+      overflow-y: auto;
       padding-top: 20px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
+      border-right: 3px solid gold;
     }
-
+    .sidebar h2 {
+      color: gold;
+      text-align: center;
+      margin: 10px 0;
+    }
     .sidebar a {
-      padding: 14px 20px;
+      display: block;
+      padding: 12px 24px;
       text-decoration: none;
+      color: white;
       font-size: 18px;
-      color: #ddd;
-      display: flex;
-      align-items: center;
-      gap: 10px;
+      border-bottom: 1px solid #222;
     }
-
     .sidebar a:hover {
-      background-color: #333;
-      color: #fff;
+      background-color: #444;
     }
-
-    .content {
+    .main-content {
       margin-left: 250px;
       padding: 40px;
     }
-
-    .buy-now {
+    .button {
       background-color: gold;
-      color: #000;
-      text-align: center;
-      padding: 20px;
+      border: none;
+      padding: 10px 20px;
+      color: black;
       font-weight: bold;
+      font-size: 18px;
+      cursor: pointer;
+      margin-top: 30px;
     }
-
-    @media (max-width: 768px) {
-      .sidebar {
-        width: 100%;
-        height: auto;
-        position: relative;
-        flex-direction: row;
-        flex-wrap: wrap;
-      }
-
-      .sidebar a {
-        flex: 1 1 50%;
-        justify-content: center;
-      }
-
-      .content {
-        margin-left: 0;
-        padding: 20px;
-      }
-
-      .buy-now {
-        flex-basis: 100%;
-      }
+    .button:hover {
+      background-color: #ffc800;
     }
   </style>
 </head>
 <body>
 
 <div class="sidebar">
-  <div>
-    <a href="index.html">🏛️ Home</a>
-    <a href="president.html">👑 President Pepe</a>
-    <a href="vicepresident.html">📘 VP Vibeshift</a>
-    <a href="firstlady.html">🚨 First Lady Binnmaggot</a>
-    <a href="agriculture.html">🌾 Director of Agriculture & Livestock</a>
-    <a href="ministerofhealth.html">🥗 Minister of Health</a>
-    <a href="origins.html">📜 Origins</a>
-  </div>
-  <a class="buy-now" href="#">🛒 Buy Now</a>
+  <h2>Pepe Political Party<br>$PPP</h2>
+  <a href="index.html">🏛 Home</a>
+  <a href="president.html">👑 President Pepe</a>
+  <a href="vicepresident.html">📘 VP Vibeshift</a>
+  <a href="firstlady.html">💄 First Lady Binnmaggot</a>
+  <a href="agriculture.html">🌴 Director of Agriculture & Livestock</a>
+  <a href="ministerofhealth.html">🥗 Minister of Health</a>
+  <a href="origins.html">📜 Origins</a>
+  <a href="#buy" class="button">Buy Now</a>
 </div>
 
-<div class="content">
-  <h1>Welcome to the Pepe Political Party ($PPP)</h1>
-  <p>Where memes become policy. This is the official site for the satirical, luxurious, and totally degen political movement led by President Pepe and his elite cabinet.</p>
+<div class="main-content">
+  <h1 style="font-family: 'Orbitron', sans-serif; font-size: 36px; color: gold;">Welcome to the Official Pepe Political Party</h1>
+  <p>The future of meme governance starts here. Join the $PPP revolution and vote with your SOL.</p>
+  <img src="images/pepe.jpg" alt="President Pepe" style="max-width: 100%; margin-top: 20px; border: 2px solid gold;" />
 </div>
 
 </body>
