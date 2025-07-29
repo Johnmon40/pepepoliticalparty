@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Pepe Political Party - $PPP</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto&display=swap" rel="stylesheet">
   <style>
     * {
@@ -28,124 +29,116 @@
       font-size: 2.5em;
       letter-spacing: 2px;
       font-weight: bold;
+      width: 100%;
     }
 
     #sidebar {
       background-color: #111;
       width: 250px;
-      padding: 20px;
       min-height: 100vh;
+      position: fixed;
+      overflow-y: auto;
       border-right: 3px solid gold;
+      padding-top: 20px;
     }
 
     #sidebar h2 {
       color: gold;
+      text-align: center;
+      font-family: 'Playfair Display', serif;
       font-size: 1.5em;
-      margin-bottom: 20px;
+      margin-bottom: 10px;
     }
 
     #sidebar a {
-      color: white;
-      text-decoration: none;
       display: block;
-      margin-bottom: 15px;
-      font-size: 1.1em;
+      color: white;
+      padding: 12px 20px;
+      text-decoration: none;
+      border-bottom: 1px solid #333;
     }
 
     #sidebar a:hover {
-      color: gold;
+      background-color: #333;
     }
 
-    #main {
-      flex: 1;
+    .content {
+      margin-left: 250px;
       padding: 20px;
-    }
-
-    img {
       width: 100%;
-      max-width: 600px;
-      display: block;
-      margin: 20px auto;
     }
 
-    /* MOBILE FIX */
-    @media (max-width: 768px) {
-      body {
-        flex-direction: column;
-        display: block;
-      }
+    .banner {
+      width: 100%;
+      border-bottom: 4px solid gold;
+      margin-bottom: 30px;
+    }
 
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+    }
+
+    .gallery img {
+      width: 100%;
+      border: 3px solid gold;
+      border-radius: 10px;
+    }
+
+    @media screen and (max-width: 768px) {
       #sidebar {
         width: 100%;
-        position: relative;
-        display: none;
-        background-color: #111;
-        border-bottom: 2px solid gold;
-        padding: 10px;
-        min-height: auto;
+        position: static;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        border-right: none;
+        border-bottom: 3px solid gold;
       }
 
-      #sidebar.open {
-        display: block;
-      }
-
-      #hamburger {
-        display: block;
-        background-color: black;
-        color: gold;
+      .content {
+        margin-left: 0;
         padding: 15px;
-        font-size: 1.5em;
-        cursor: pointer;
-        text-align: center;
       }
-    }
 
-    @media (min-width: 769px) {
-      #hamburger {
-        display: none;
+      #sidebar a {
+        border-bottom: none;
+        border-right: 1px solid #333;
       }
     }
   </style>
 </head>
 <body>
-  <div id="hamburger" onclick="toggleSidebar()">☰ Menu</div>
 
-  <div id="sidebar" class="">
+  <div id="sidebar">
     <h2>Pepe Political Party</h2>
     <a href="index.html">$PPP</a>
     <a href="president.html">President Pepe</a>
     <a href="vicepresident.html">Vice President Vibeshift</a>
     <a href="firstlady.html">First Lady Binnmaggot</a>
+    <a href="education.html">Secretary of Education Pudgy</a>
     <a href="ministerofhealth.html">Minister of Health</a>
     <a href="livestock.html">Director of Agriculture & Livestock</a>
-    <a href="chief.html">Chief of Staff</a>
     <a href="origins.html">Origins</a>
   </div>
 
-  <div id="main">
+  <div class="content">
+    <img src="images/banner.jpg" alt="Banner" class="banner">
     <header>Pepe Political Party - $PPP</header>
-
-    <!-- Homepage banner -->
-    <img src="banner.png" alt="Banner">
-
-    <!-- Image gallery -->
-    <img src="image1.jpg" alt="Image 1">
-    <img src="image2.jpg" alt="Image 2">
-    <img src="image3.jpg" alt="Image 3">
-    <img src="image4.jpg" alt="Image 4">
-    <img src="image5.jpg" alt="Image 5">
-    <img src="image6.jpg" alt="Image 6">
-    <img src="image7.jpg" alt="Image 7">
-    <img src="image8.jpg" alt="Image 8">
-    <img src="image9.jpg" alt="Image 9">
-    <img src="image10.jpg" alt="Image 10">
+    <div class="gallery">
+      <img src="images/image-1.jpg" alt="Gallery Image 1">
+      <img src="images/image-2.jpg" alt="Gallery Image 2">
+      <img src="images/image-3.jpg" alt="Gallery Image 3">
+      <img src="images/image-4.jpg" alt="Gallery Image 4">
+      <img src="images/image-5.jpg" alt="Gallery Image 5">
+      <img src="images/image-6.jpg" alt="Gallery Image 6">
+      <img src="images/image-7.jpg" alt="Gallery Image 7">
+      <img src="images/image-8.jpg" alt="Gallery Image 8">
+      <img src="images/image-9.jpg" alt="Gallery Image 9">
+      <img src="images/image-10.jpg" alt="Gallery Image 10">
+    </div>
   </div>
 
-  <script>
-    function toggleSidebar() {
-      const sidebar = document.getElementById("sidebar");
-      sidebar.classList.toggle("open");
-    }
-  </script>
 </body>
 </html>
