@@ -17,7 +17,6 @@
       font-family: 'Roboto', sans-serif;
       background-color: #000;
       color: #fff;
-      display: flex;
     }
 
     header {
@@ -29,7 +28,6 @@
       font-size: 2.5em;
       letter-spacing: 2px;
       font-weight: bold;
-      width: 100%;
     }
 
     #sidebar {
@@ -65,11 +63,13 @@
     .content {
       margin-left: 250px;
       padding: 20px;
-      width: 100%;
     }
 
     .banner {
       width: 100%;
+      max-width: 100%;
+      height: auto;
+      display: block;
       border-bottom: 4px solid gold;
       margin-bottom: 30px;
     }
@@ -82,11 +82,17 @@
 
     .gallery img {
       width: 100%;
+      height: auto;
       border: 3px solid gold;
       border-radius: 10px;
     }
 
+    /* Mobile styling */
     @media screen and (max-width: 768px) {
+      body {
+        display: block;
+      }
+
       #sidebar {
         width: 100%;
         position: static;
@@ -95,6 +101,7 @@
         justify-content: center;
         border-right: none;
         border-bottom: 3px solid gold;
+        padding: 10px 0;
       }
 
       .content {
@@ -105,6 +112,14 @@
       #sidebar a {
         border-bottom: none;
         border-right: 1px solid #333;
+        padding: 10px 12px;
+        font-size: 0.9em;
+      }
+
+      #sidebar h2 {
+        width: 100%;
+        font-size: 1.3em;
+        margin-bottom: 5px;
       }
     }
   </style>
