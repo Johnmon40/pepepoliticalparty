@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Pepe Political Party - $PPP</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto&display=swap" rel="stylesheet">
   <style>
     * {
@@ -17,165 +18,118 @@
       background-color: #000;
       color: #fff;
       display: flex;
-      flex-direction: row;
-      min-height: 100vh;
-    }
-
-    #sidebar {
-      background-color: #111;
-      width: 250px;
-      padding: 20px;
-      border-right: 3px solid gold;
-      flex-shrink: 0;
-    }
-
-    #sidebar h2 {
-      color: gold;
-      font-size: 1.5em;
-      margin-bottom: 20px;
-    }
-
-    #sidebar a {
-      display: block;
-      color: white;
-      text-decoration: none;
-      margin-bottom: 15px;
-      font-size: 1.1em;
-    }
-
-    #sidebar a:hover {
-      text-decoration: underline;
-    }
-
-    #sidebarToggle {
-      display: none;
-    }
-
-    #main {
-      flex: 1;
-      padding: 0 20px 40px 20px;
     }
 
     header {
       background-color: gold;
       color: black;
       text-align: center;
-      padding: 20px;
+      padding: 30px 20px;
       font-family: 'Playfair Display', serif;
-      font-size: 2em;
+      font-size: 2.5em;
+      letter-spacing: 2px;
       font-weight: bold;
-      border-bottom: 5px solid black;
+      width: 100%;
     }
 
-    .banner {
-      width: 100%;
-      border: 5px solid gold;
-      border-radius: 10px;
-      margin: 20px auto;
+    #sidebar {
+      background-color: #111;
+      width: 250px;
+      min-height: 100vh;
+      position: fixed;
+      overflow-y: auto;
+      border-right: 3px solid gold;
+      padding-top: 20px;
+    }
+
+    #sidebar h2 {
+      color: gold;
+      text-align: center;
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5em;
+      margin-bottom: 10px;
+    }
+
+    #sidebar a {
       display: block;
+      color: white;
+      padding: 12px 20px;
+      text-decoration: none;
+      border-bottom: 1px solid #333;
+    }
+
+    #sidebar a:hover {
+      background-color: #333;
+    }
+
+    .content {
+      margin-left: 250px;
+      padding: 20px;
+      width: 100%;
     }
 
     .gallery {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 20px;
-      padding: 20px 0;
     }
 
     .gallery img {
       width: 100%;
-      border: 4px solid gold;
+      border: 3px solid gold;
       border-radius: 10px;
     }
 
     @media screen and (max-width: 768px) {
-      body {
-        flex-direction: column;
-      }
-
       #sidebar {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 70vw;
-        height: 100%;
-        transform: translateX(-100%);
-        transition: transform 0.3s ease;
-        z-index: 1000;
+        width: 100%;
+        position: static;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        border-right: none;
+        border-bottom: 3px solid gold;
       }
 
-      #sidebar.active {
-        transform: translateX(0);
+      .content {
+        margin-left: 0;
+        padding: 15px;
       }
 
-      #sidebarToggle {
-        display: block;
-        background-color: gold;
-        color: black;
-        border: none;
-        font-size: 1.2em;
-        padding: 10px 15px;
-        position: fixed;
-        top: 10px;
-        left: 10px;
-        z-index: 1001;
-        border-radius: 5px;
-      }
-
-      #main {
-        padding-top: 60px;
-      }
-
-      header {
-        font-size: 1.5em;
+      #sidebar a {
+        border-bottom: none;
+        border-right: 1px solid #333;
       }
     }
   </style>
 </head>
 <body>
 
-  <button id="sidebarToggle">☰ Menu</button>
-
   <div id="sidebar">
     <h2>Pepe Political Party</h2>
-    <a href="index.html">$PPP Home</a>
+    <a href="index.html">$PPP</a>
     <a href="president.html">President Pepe</a>
     <a href="vicepresident.html">Vice President Vibeshift</a>
     <a href="firstlady.html">First Lady Binnmaggot</a>
+    <a href="wuhan.html">Secretary of State Wuhan</a>
     <a href="ministerofhealth.html">Minister of Health</a>
-    <a href="education.html">Secretary of Education</a> 
     <a href="livestock.html">Director of Agriculture & Livestock</a>
-    <a href="chiefofstaff.html">Chief of Staff</a>
     <a href="origins.html">Origins</a>
-    <a href="#">Buy Now</a>
   </div>
 
-  <div id="main">
-    <header>Welcome to the Pepe Political Party</header>
-
-    <img src="images/banner.jpg" alt="Pepe Political Banner" class="banner">
-
+  <div class="content">
+    <header>Pepe Political Party - $PPP</header>
     <div class="gallery">
-      <img src="images/image-1.jpg" alt="image-1">
-      <img src="images/image-2.jpg" alt="image-2">
-      <img src="images/image-3.jpg" alt="image-3">
-      <img src="images/image-4.jpg" alt="image-4">
-      <img src="images/image-5.jpg" alt="image-5">
-      <img src="images/image-6.jpg" alt="image-6">
-      <img src="images/image-7.jpg" alt="image-7">
-      <img src="images/image-8.jpg" alt="image-8">
-      <img src="images/image-9.jpg" alt="image-9">
-      <img src="images/image-10.jpg" alt="image-10">
+      <img src="image1.jpg" alt="image">
+      <img src="image2.jpg" alt="image">
+      <img src="image3.jpg" alt="image">
+      <img src="image4.jpg" alt="image">
+      <img src="image5.jpg" alt="image">
+      <img src="image6.jpg" alt="image">
+      <img src="image7.jpg" alt="image">
+      <img src="image8.jpg" alt="image">
     </div>
   </div>
-
-  <script>
-    const toggleBtn = document.getElementById("sidebarToggle");
-    const sidebar = document.getElementById("sidebar");
-    toggleBtn.addEventListener("click", () => {
-      sidebar.classList.toggle("active");
-    });
-  </script>
 
 </body>
 </html>
