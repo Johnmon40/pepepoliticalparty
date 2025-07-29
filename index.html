@@ -87,56 +87,81 @@
       border-radius: 10px;
     }
 
-    /* Mobile styling */
+    /* Hamburger menu styling for mobile */
+    .mobile-nav-toggle {
+      display: none;
+      background-color: gold;
+      color: black;
+      border: none;
+      font-size: 1.5em;
+      padding: 10px 20px;
+      width: 100%;
+      text-align: left;
+    }
+
+    .mobile-menu {
+      display: none;
+      background-color: #111;
+      border-top: 3px solid gold;
+    }
+
+    .mobile-menu a {
+      display: block;
+      color: white;
+      padding: 12px 20px;
+      text-decoration: none;
+      border-bottom: 1px solid #333;
+    }
+
+    .mobile-menu a:hover {
+      background-color: #333;
+    }
+
     @media screen and (max-width: 768px) {
-  body {
-    display: block;
-  }
+      #sidebar {
+        display: none;
+      }
 
-  #sidebar {
-    width: 100%;
-    position: static;
-    display: flex;
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    border-right: none;
-    border-bottom: 3px solid gold;
-    padding: 8px 10px;
-    gap: 8px;
-    justify-content: flex-start;
-    background-color: #111;
-  }
+      .mobile-nav-toggle {
+        display: block;
+      }
 
-  #sidebar h2 {
-    display: none;
-  }
+      .content {
+        margin-left: 0;
+        padding: 15px;
+      }
 
-  #sidebar a {
-    border: none;
-    white-space: nowrap;
-    padding: 8px 12px;
-    border-radius: 5px;
-    background-color: #222;
-    font-size: 0.9em;
-    flex-shrink: 0;
-  }
-
-  .content {
-    margin-left: 0;
-    padding: 10px 15px;
-  }
-
-  .banner {
-    margin-top: 0;
-  }
-}
-
+      .banner {
+        margin-top: 10px;
+      }
+    }
   </style>
+  <script>
+    function toggleMobileMenu() {
+      const menu = document.getElementById("mobileMenu");
+      menu.style.display = (menu.style.display === "block") ? "none" : "block";
+    }
+  </script>
 </head>
 <body>
 
+  <!-- Desktop Sidebar -->
   <div id="sidebar">
     <h2>Pepe Political Party</h2>
+    <a href="index.html">$PPP</a>
+    <a href="president.html">President Pepe</a>
+    <a href="vicepresident.html">Vice President Vibeshift</a>
+    <a href="firstlady.html">First Lady Binnmaggot</a>
+    <a href="education.html">Secretary of Education Pudgy</a>
+    <a href="chiefofstaff.html">Chief of Staff</a>
+    <a href="ministerofhealth.html">Minister of Health</a>
+    <a href="livestock.html">Director of Agriculture & Livestock</a>
+    <a href="origins.html">Origins</a>
+  </div>
+
+  <!-- Mobile Dropdown -->
+  <button class="mobile-nav-toggle" onclick="toggleMobileMenu()">☰ Menu</button>
+  <div id="mobileMenu" class="mobile-menu">
     <a href="index.html">$PPP</a>
     <a href="president.html">President Pepe</a>
     <a href="vicepresident.html">Vice President Vibeshift</a>
