@@ -25,23 +25,28 @@
     }
 
     .content {
-      padding: 20px;
-      max-width: 1000px;
-      margin: 0 auto;
-      text-align: center;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 30px;
     }
 
     .content img {
       width: 100%;
-      max-width: 600px;
+      max-width: 300px;
       height: auto;
-      margin: 20px 0;
       border-radius: 12px;
       border: 3px solid gold;
+      background-color: #111;
     }
 
     .back-button {
-      margin-top: 30px;
+      text-align: center;
+      margin: 40px 0;
+    }
+
+    .back-button a {
       display: inline-block;
       padding: 12px 20px;
       background-color: gold;
@@ -49,9 +54,10 @@
       text-decoration: none;
       font-weight: bold;
       border-radius: 8px;
+      transition: background-color 0.3s;
     }
 
-    .back-button:hover {
+    .back-button a:hover {
       background-color: #e6c200;
     }
   </style>
@@ -61,9 +67,12 @@
   <div class="content">
     <img src="images/endorsement1.jpg" alt="Endorsement 1">
     <img src="images/endorsement2.jpg" alt="Endorsement 2">
+    <!-- Add more below as needed -->
+    <!-- <img src="images/endorsement3.jpg" alt="Endorsement 3"> -->
+  </div>
 
-
-    <a href="index.html" class="back-button">← Back to Main Menu</a>
+  <div class="back-button">
+    <a href="index.html">← Back to Main Menu</a>
   </div>
 </body>
 </html>
