@@ -5,81 +5,70 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Endorsements - Pepe Political Party</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto&display=swap" rel="stylesheet">
-  <style>
-    body {
-      background-color: #000;
-      color: white;
-      font-family: 'Roboto', sans-serif;
-      margin: 0;
-      padding: 0;
-    }
+<style>
+  body {
+    background-color: #000;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+  }
 
-    header {
-      background-color: gold;
-      color: black;
-      text-align: center;
-      padding: 30px 20px;
-      font-family: 'Playfair Display', serif;
-      font-size: 2.2em;
-      font-weight: bold;
-    }
+  header {
+    background-color: gold;
+    color: black;
+    text-align: center;
+    padding: 30px 20px;
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2em;
+    font-weight: bold;
+  }
 
-    .content {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-      padding: 30px;
-    .content {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px;
-  padding: 30px;
-  justify-items: center;
-}
+  .content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 30px;
+    max-width: 1200px;
+    margin: auto;
+  }
 
-.content img {
-  width: 100%;
-  max-width: 100%;
-  height: auto;
-  border-radius: 12px;
-  border: 3px solid gold;
-}
+  .content img {
+    width: 300px;
+    height: auto;
+    border-radius: 12px;
+    border: 3px solid gold;
+  }
 
+  .back-button {
+    margin: 40px auto;
+    display: block;
+    padding: 12px 20px;
+    background-color: gold;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 8px;
+    width: fit-content;
+  }
 
-    .back-button {
-      text-align: center;
-      margin: 40px 0;
-    }
+  .back-button:hover {
+    background-color: #e6c200;
+  }
+</style>
 
-    .back-button a {
-      display: inline-block;
-      padding: 12px 20px;
-      background-color: gold;
-      color: black;
-      text-decoration: none;
-      font-weight: bold;
-      border-radius: 8px;
-      transition: background-color 0.3s;
-    }
-
-    .back-button a:hover {
-      background-color: #e6c200;
-    }
-  </style>
 </head>
 <body>
   <header>Endorsements</header>
   <div class="content">
-    <img src="images/endorsement1.jpg" alt="Endorsement 1">
-    <img src="images/endorsement2.jpg" alt="Endorsement 2">
-    <img src="images/endorsement3.jpg" alt="Endorsement 3">
-    <!-- Add more below as needed -->
-    <!-- <img src="images/endorsement3.jpg" alt="Endorsement 3"> -->
-  </div>
+  <img src="images/endorsement1.jpg" alt="Endorsement 1">
+  <img src="images/endorsement2.jpg" alt="Endorsement 2">
+  <img src="images/endorsement3.jpg" alt="Endorsement 3">
+  <!-- Add more <img> lines here as you create more endorsements -->
+</div>
 
-  <div class="back-button">
-    <a href="index.html">← Back to Main Menu</a>
-  </div>
+<a href="index.html" class="back-button">← Back to Main Menu</a>
+
 </body>
 </html>
