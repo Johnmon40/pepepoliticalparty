@@ -64,7 +64,9 @@
     Place your video file (blackmail.mp4) in the repo root next to index.html.
     Autoplay requires the video to be MUTED on most browsers.
   -->
-  <video class="bg" src="blackmail.mp4" autoplay loop muted playsinline preload="auto"></video>
+ <video class="bg" autoplay loop muted playsinline preload="auto">
+  <source src="blackmail.mp4" type="video/mp4">
+</video>
   <div class="vignette" aria-hidden="true"></div>
 
   <header class="site-banner" role="banner">
