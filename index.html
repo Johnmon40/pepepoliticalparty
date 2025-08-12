@@ -1,4 +1,4 @@
-    <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -7,141 +7,134 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto&display=swap" rel="stylesheet">
   <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
+    :root{
+      /* Palette pulled from your banner */
+      --navy:#0c223b;       /* page/sidebars/header bg */
+      --navy-2:#102a48;     /* hover / subtle contrast */
+      --red:#d1292f;        /* accent red */
+      --white:#ffffff;      /* text & borders */
     }
 
-    body {
-      font-family: 'Roboto', sans-serif;
-      background-color: #000;
-      color: #fff;
+    *{ box-sizing:border-box; margin:0; padding:0; }
+
+    body{
+      font-family:'Roboto',sans-serif;
+      background-color:var(--navy);
+      color:var(--white);
     }
 
-    header {
-      background-color: gold;
-      color: black;
-      text-align: center;
-      padding: 30px 20px;
-      font-family: 'Playfair Display', serif;
-      font-size: 2.5em;
-      letter-spacing: 2px;
-      font-weight: bold;
+    header{
+      background-color:var(--navy);
+      color:var(--white);
+      text-align:center;
+      padding:30px 20px;
+      font-family:'Playfair Display',serif;
+      font-size:2.5em;
+      letter-spacing:2px;
+      font-weight:bold;
+      border-top:4px solid var(--navy);     /* keeps layout identical */
+      border-bottom:4px solid var(--red);   /* patriotic accent */
     }
 
-   #sidebar {
-  background-color: #111;
-  width: 250px;
-  height: 100vh; /* Full height of viewport */
-  overflow-y: auto; /* Enables vertical scroll */
-  position: fixed;
-  border-right: 3px solid gold;
-  padding-top: 20px;
-}
-
-
-    #sidebar h2 {
-      color: gold;
-      text-align: center;
-      font-family: 'Playfair Display', serif;
-      font-size: 1.5em;
-      margin-bottom: 10px;
+    /* Desktop Sidebar */
+    #sidebar{
+      background-color:var(--navy);
+      width:250px;
+      height:100vh;
+      overflow-y:auto;
+      position:fixed;
+      border-right:3px solid var(--red);
+      padding-top:20px;
     }
 
-    #sidebar a {
-      display: block;
-      color: white;
-      padding: 12px 20px;
-      text-decoration: none;
-      border-bottom: 1px solid #333;
+    #sidebar h2{
+      color:var(--white);
+      text-align:center;
+      font-family:'Playfair Display',serif;
+      font-size:1.5em;
+      margin-bottom:10px;
     }
 
-    #sidebar a:hover {
-      background-color: #333;
+    #sidebar a{
+      display:block;
+      color:var(--white);
+      padding:12px 20px;
+      text-decoration:none;
+      border-bottom:1px solid rgba(255,255,255,0.12);
     }
 
-    .content {
-      margin-left: 250px;
-      padding: 20px;
+    #sidebar a:hover{
+      background-color:var(--navy-2);
     }
 
-    .banner {
-      width: 100%;
-      max-width: 100%;
-      height: auto;
-      display: block;
-      border-bottom: 4px solid gold;
-      margin-bottom: 30px;
+    .content{ margin-left:250px; padding:20px; }
+
+    .banner{
+      width:100%;
+      max-width:100%;
+      height:auto;
+      display:block;
+      border-bottom:4px solid var(--red);
+      margin-bottom:30px;
     }
 
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 20px;
+    .gallery{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+      gap:20px;
     }
 
-    .gallery img {
-      width: 100%;
-      height: auto;
-      border: 3px solid gold;
-      border-radius: 10px;
+    .gallery img{
+      width:100%;
+      height:auto;
+      border:3px solid var(--white);
+      border-radius:10px;
+      background:#081a2e; /* subtle fallback if image slow to load */
     }
 
-    /* Hamburger menu styling for mobile */
-    .mobile-nav-toggle {
-      display: none;
-      background-color: gold;
-      color: black;
-      border: none;
-      font-size: 1.5em;
-      padding: 10px 20px;
-      width: 100%;
-      text-align: left;
+    /* Mobile nav */
+    .mobile-nav-toggle{
+      display:none;
+      background-color:var(--red);
+      color:var(--white);
+      border:none;
+      font-size:1.5em;
+      padding:10px 20px;
+      width:100%;
+      text-align:left;
     }
 
-    .mobile-menu {
-      display: none;
-      background-color: #111;
-      border-top: 3px solid gold;
+    .mobile-menu{
+      display:none;
+      background-color:var(--navy);
+      border-top:3px solid var(--red);
     }
 
-    .mobile-menu a {
-      display: block;
-      color: white;
-      padding: 12px 20px;
-      text-decoration: none;
-      border-bottom: 1px solid #333;
+    .mobile-menu a{
+      display:block;
+      color:var(--white);
+      padding:12px 20px;
+      text-decoration:none;
+      border-bottom:1px solid rgba(255,255,255,0.12);
     }
 
-    .mobile-menu a:hover {
-      background-color: #333;
+    .mobile-menu a:hover{
+      background-color:var(--navy-2);
     }
 
-    @media screen and (max-width: 768px) {
-      #sidebar {
-        display: none;
-      }
-
-      .mobile-nav-toggle {
-        display: block;
-      }
-
-      .content {
-        margin-left: 0;
-        padding: 15px;
-      }
-
-      .banner {
-        margin-top: 10px;
-      }
+    @media screen and (max-width:768px){
+      #sidebar{ display:none; }
+      .mobile-nav-toggle{ display:block; }
+      .content{ margin-left:0; padding:15px; }
+      .banner{ margin-top:10px; }
     }
   </style>
   <script>
-    function toggleMobileMenu() {
-      const menu = document.getElementById("mobileMenu");
-      menu.style.display = (menu.style.display === "block") ? "none" : "block";
+    function toggleMobileMenu(){
+      const menu=document.getElementById("mobileMenu");
+      menu.style.display=(menu.style.display==="block")?"none":"block";
     }
+    function showPopup(){ alert("CA coming soon."); }
   </script>
 </head>
 <body>
@@ -159,7 +152,7 @@
     <a href="rex.html">Minister of Armaments</a>
     <a href="rekt.html">Chair of the Federal Reserve</a>
     <a href="education.html">Secretary of Education</a>
-    <a href="chiefofstaff.html">Chief of Staff</a> 
+    <a href="chiefofstaff.html">Chief of Staff</a>
     <a href="coordination.html">Coordination Advisor</a>
     <a href="chiefusher.html">Chief Usher of White House</a>
     <a href="ministerofhealth.html">Minister of Health</a>
@@ -171,11 +164,10 @@
     <a href="livestock.html">Director of Agriculture & Livestock</a>
     <a href="transgenders.html">Department of Transgenders</a>
     <a href="interns.html">White House Interns</a>
-    <a href="origins.html">Origins</a> 
+    <a href="origins.html">Origins</a>
     <a href="endorsements.html">Endorsements</a>
     <a href="shop.html">🛒 Shop</a>
     <a href="#" onclick="showPopup()">Buy Now</a>
-
   </div>
 
   <!-- Mobile Dropdown -->
@@ -225,11 +217,6 @@
       <img src="images/image-10.jpg" alt="Gallery Image 10">
     </div>
   </div>
-<script>
-  function showPopup() {
-    alert("CA coming soon.");
-  }
-</script>
 
 </body>
 </html>
