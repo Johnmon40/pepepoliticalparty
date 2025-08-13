@@ -6,28 +6,46 @@
   <title>Minister of Health Nixon</title>
   <link href="https://fonts.googleapis.com/css2?family=Anton&family=Roboto:wght@300;700&display=swap" rel="stylesheet">
   <style>
+    :root {
+      --navy: #0c223b;
+      --navy-2: #102a48;
+      --red: #d1292f;
+      --white: #ffffff;
+    }
+
     body {
       margin: 0;
       font-family: 'Roboto', sans-serif;
-      background-color: #0a0a0a;
-      color: white;
+      background-color: var(--navy);
+      color: var(--white);
       text-align: center;
       padding: 20px;
     }
 
     a {
-      color: gold;
+      color: var(--red);
       font-weight: bold;
       text-decoration: none;
       display: inline-block;
       margin-bottom: 30px;
+      padding: 10px 16px;
+      border: 2px solid var(--red);
+      border-radius: 8px;
+      transition: background 0.3s;
+    }
+
+    a:hover {
+      background: var(--red);
+      color: var(--white);
     }
 
     h1 {
       font-family: 'Anton', sans-serif;
       font-size: 42px;
-      color: gold;
+      color: var(--white);
       margin-bottom: 20px;
+      border-bottom: 4px solid var(--red);
+      padding-bottom: 10px;
     }
 
     p {
@@ -36,14 +54,16 @@
       max-width: 900px;
       margin: 0 auto 40px auto;
       padding: 0 20px;
+      text-align: left;
     }
 
     .character-image {
       max-width: 700px;
       width: 90%;
-      border: 3px solid gold;
+      border: 3px solid var(--white);
       border-radius: 10px;
-      box-shadow: 0 0 20px gold;
+      box-shadow: 0 0 20px var(--red);
+      background: #081a2e;
     }
   </style>
 </head>
@@ -57,8 +77,7 @@
     Nixon didn’t win with promises—he won with memes, muscle, and mouth-watering meals. A walking meme factory who could outshitpost an entire DAO in under 10 minutes, he also builds roofs, cuts lumber, runs the bar at night, and still serves tacos so good they’ve been declared emotionally healing. From leafy green salads to spiced carnitas, his cooking alone is reason enough to trust his health advice. Meme doctor. Grill master. Minister of Health.
   </p>
 
- <img class="character-image" src="images/nixon-health.jpg" alt="Minister of Health Nixon" />
-
+  <img class="character-image" src="images/nixon-health.jpg" alt="Minister of Health Nixon" />
 
 </body>
 </html>
