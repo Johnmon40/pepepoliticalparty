@@ -4,30 +4,48 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Vice President Vibeshift</title>
-  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Roboto:wght@300;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@300;700&display=swap" rel="stylesheet">
   <style>
+    :root{
+      --navy:#0c223b;
+      --navy-2:#102a48;
+      --red:#d1292f;
+      --white:#ffffff;
+    }
+
     body {
       margin: 0;
       font-family: 'Roboto', sans-serif;
-      background-color: #0a0a0a;
-      color: white;
+      background-color: var(--navy);
+      color: var(--white);
       text-align: center;
       padding: 20px;
     }
 
     a {
-      color: gold;
+      color: var(--red);
       font-weight: bold;
       text-decoration: none;
       display: inline-block;
       margin-bottom: 30px;
+      padding: 10px 15px;
+      border: 2px solid var(--red);
+      border-radius: 6px;
+    }
+
+    a:hover {
+      background-color: var(--red);
+      color: var(--white);
     }
 
     h1 {
-      font-family: 'Anton', sans-serif;
+      font-family: 'Playfair Display', serif;
       font-size: 42px;
-      color: gold;
+      color: var(--white);
       margin-bottom: 20px;
+      border-bottom: 3px solid var(--red);
+      display: inline-block;
+      padding-bottom: 5px;
     }
 
     p {
@@ -36,14 +54,16 @@
       max-width: 900px;
       margin: 0 auto 40px auto;
       padding: 0 20px;
+      text-align: left;
     }
 
     .character-image {
       max-width: 700px;
       width: 90%;
-      border: 3px solid gold;
+      border: 3px solid var(--white);
       border-radius: 10px;
-      box-shadow: 0 0 20px gold;
+      box-shadow: 0 0 20px var(--red);
+      background-color: var(--navy-2);
     }
   </style>
 </head>
@@ -54,11 +74,10 @@
   <h1>Vice President Vibeshift</h1>
 
   <p>
-    Vibeshift didn’t run for office—he manifested it. Known for channeling market energy through crystal memes and full-moon shitpost ceremonies, he became the spiritual wing of the $PPP movement. While President Pepe handles policy, Vibeshift handles *vibes*—cleansing FUD, restoring green candles, and posting aura-tier memes that make whole blockchains feel bullish. He’s the only VP to legally ban Mercury Retrograde.
+    Vibeshift didn’t run for office—he manifested it. Known for channeling market energy through crystal memes and full-moon shitpost ceremonies, he became the spiritual wing of the $PPP movement. While President Pepe handles policy, Vibeshift handles <em>vibes</em>—cleansing FUD, restoring green candles, and posting aura-tier memes that make whole blockchains feel bullish. He’s the only VP to legally ban Mercury Retrograde.
   </p>
 
  <img class="character-image" src="images/vp.jpg" alt="Vice President Vibeshift" />
-
 
 </body>
 </html>
