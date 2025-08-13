@@ -6,22 +6,30 @@
   <title>Endorsements - Pepe Political Party</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto&display=swap" rel="stylesheet">
 <style>
+  :root {
+    --navy: #0c223b;
+    --navy-2: #102a48;
+    --red: #d1292f;
+    --white: #ffffff;
+  }
+
   body {
-    background-color: #000;
-    color: white;
+    background-color: var(--navy);
+    color: var(--white);
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
   }
 
   header {
-    background-color: gold;
-    color: black;
+    background-color: var(--navy);
+    color: var(--white);
     text-align: center;
     padding: 30px 20px;
     font-family: 'Playfair Display', serif;
     font-size: 2.2em;
     font-weight: bold;
+    border-bottom: 4px solid var(--red);
   }
 
   .content {
@@ -38,15 +46,16 @@
     width: 300px;
     height: auto;
     border-radius: 12px;
-    border: 3px solid gold;
+    border: 3px solid var(--white);
+    background: #081a2e;
   }
 
   .back-button {
     margin: 40px auto;
     display: block;
     padding: 12px 20px;
-    background-color: gold;
-    color: black;
+    background-color: var(--red);
+    color: var(--white);
     text-decoration: none;
     font-weight: bold;
     border-radius: 8px;
@@ -54,7 +63,7 @@
   }
 
   .back-button:hover {
-    background-color: #e6c200;
+    background-color: var(--navy-2);
   }
 </style>
 
@@ -62,19 +71,19 @@
 <body>
   <header>Endorsements</header>
   <div class="content">
-  <img src="images/endorsement1.jpg" alt="Endorsement 1">
-  <img src="images/endorsement2.jpg" alt="Endorsement 2">
-  <img src="images/endorsement3.jpg" alt="Endorsement 3">
-  <img src="images/endorsement4.jpg" alt="Endorsement 4">
-  <img src="images/endorsement5.jpg" alt="Endorsement 5">
-  <img src="images/endorsement6.jpg" alt="Endorsement 6">
-  <img src="images/endorsement7.jpg" alt="Endorsement 7">
-  <img src="images/endorsement8.jpg" alt="Endorsement 8">
-  <img src="images/endorsement9.jpg" alt="Endorsement 9">
-  <!-- Add more <img> lines here as you create more endorsements -->
-</div>
+    <img src="images/endorsement1.jpg" alt="Endorsement 1">
+    <img src="images/endorsement2.jpg" alt="Endorsement 2">
+    <img src="images/endorsement3.jpg" alt="Endorsement 3">
+    <img src="images/endorsement4.jpg" alt="Endorsement 4">
+    <img src="images/endorsement5.jpg" alt="Endorsement 5">
+    <img src="images/endorsement6.jpg" alt="Endorsement 6">
+    <img src="images/endorsement7.jpg" alt="Endorsement 7">
+    <img src="images/endorsement8.jpg" alt="Endorsement 8">
+    <img src="images/endorsement9.jpg" alt="Endorsement 9">
+    <!-- Add more <img> lines here as you create more endorsements -->
+  </div>
 
-<a href="index.html" class="back-button">← Back to Main Menu</a>
+  <a href="index.html" class="back-button">← Back to Main Menu</a>
 
 </body>
 </html>
