@@ -6,23 +6,31 @@
   <title>Origins - Pepe Political Party</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto&display=swap" rel="stylesheet">
   <style>
+    :root {
+      --navy: #0c223b;
+      --navy-2: #102a48;
+      --red: #d1292f;
+      --white: #ffffff;
+    }
+
     body {
-      background-color: #000;
-      color: white;
+      background-color: var(--navy);
+      color: var(--white);
       font-family: 'Roboto', sans-serif;
       margin: 0;
       padding: 0;
     }
 
     header {
-      background-color: gold;
-      color: black;
+      background-color: var(--red);
+      color: var(--white);
       text-align: center;
       padding: 30px 20px;
       font-family: 'Playfair Display', serif;
       font-size: 2.5em;
       letter-spacing: 1.5px;
       font-weight: bold;
+      border-bottom: 4px solid var(--white);
     }
 
     .content {
@@ -35,9 +43,11 @@
 
     .content h2 {
       font-family: 'Playfair Display', serif;
-      color: gold;
+      color: var(--red);
       font-size: 2em;
       margin-top: 20px;
+      border-bottom: 2px solid var(--white);
+      padding-bottom: 5px;
     }
 
     .content img {
@@ -45,26 +55,30 @@
       max-width: 100%;
       height: auto;
       margin: 30px auto;
-      border: 3px solid gold;
+      border: 3px solid var(--white);
       border-radius: 15px;
+      box-shadow: 0 0 20px var(--red);
+      background: #081a2e;
     }
 
     .back-button {
       display: block;
       text-align: center;
       margin: 40px auto;
-      background-color: gold;
-      color: black;
+      background-color: var(--red);
+      color: var(--white);
       padding: 12px 30px;
-      border: none;
+      border: 2px solid var(--white);
       border-radius: 25px;
       font-size: 1em;
       text-decoration: none;
       width: fit-content;
+      transition: background 0.3s;
     }
 
     .back-button:hover {
-      background-color: #d4af37;
+      background-color: var(--white);
+      color: var(--navy);
     }
   </style>
 </head>
