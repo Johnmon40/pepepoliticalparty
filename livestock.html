@@ -4,19 +4,26 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Director of Agriculture & Livestock – Parabolic</title>
-  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Roboto:wght@300;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto&display=swap" rel="stylesheet">
   <style>
+    :root {
+      --navy:#0c223b;
+      --navy-2:#102a48;
+      --red:#d1292f;
+      --white:#ffffff;
+    }
+
     body {
       margin: 0;
       font-family: 'Roboto', sans-serif;
-      background-color: #0a0a0a;
-      color: white;
+      background-color: var(--navy);
+      color: var(--white);
       text-align: center;
       padding: 20px;
     }
 
     a {
-      color: gold;
+      color: var(--red);
       font-weight: bold;
       text-decoration: none;
       display: inline-block;
@@ -24,10 +31,13 @@
     }
 
     h1 {
-      font-family: 'Anton', sans-serif;
+      font-family: 'Playfair Display', serif;
       font-size: 42px;
-      color: gold;
+      color: var(--white);
       margin-bottom: 20px;
+      border-bottom: 3px solid var(--red);
+      display: inline-block;
+      padding-bottom: 5px;
     }
 
     p {
@@ -41,9 +51,9 @@
     .character-image {
       max-width: 700px;
       width: 90%;
-      border: 3px solid gold;
+      border: 3px solid var(--white);
       border-radius: 10px;
-      box-shadow: 0 0 20px gold;
+      background: #081a2e;
     }
   </style>
 </head>
