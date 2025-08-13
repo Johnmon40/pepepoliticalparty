@@ -6,23 +6,31 @@
   <title>Chief of Staff - Pepe Political Party</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto&display=swap" rel="stylesheet">
   <style>
+    :root{
+      --navy:#0c223b;
+      --navy-2:#102a48;
+      --red:#d1292f;
+      --white:#ffffff;
+    }
+
     body {
-      background-color: #000;
-      color: white;
+      background-color: var(--navy);
+      color: var(--white);
       font-family: 'Roboto', sans-serif;
       margin: 0;
       padding: 0;
     }
 
     header {
-      background-color: gold;
-      color: black;
+      background-color: var(--navy);
+      color: var(--white);
       text-align: center;
       padding: 30px 20px;
       font-family: 'Playfair Display', serif;
       font-size: 2.5em;
       letter-spacing: 1.5px;
       font-weight: bold;
+      border-bottom: 4px solid var(--red);
     }
 
     .content {
@@ -36,23 +44,24 @@
       max-width: 600px;
       display: block;
       margin: 20px auto;
-      border: 4px solid gold;
+      border: 4px solid var(--white);
       border-radius: 12px;
+      background: #081a2e;
     }
 
     .back-button {
       display: inline-block;
       margin-top: 30px;
       padding: 12px 20px;
-      background-color: gold;
-      color: black;
+      background-color: var(--red);
+      color: var(--white);
       text-decoration: none;
       font-weight: bold;
       border-radius: 8px;
     }
 
     .back-button:hover {
-      background-color: #e6c200;
+      background-color: var(--navy-2);
     }
 
     p {
