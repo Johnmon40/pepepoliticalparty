@@ -6,11 +6,17 @@
   <title>President Pepe</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@300;500&display=swap" rel="stylesheet">
   <style>
+    :root {
+      --navy: #0c223b;
+      --red: #d1292f;
+      --white: #ffffff;
+    }
+
     body {
       margin: 0;
-      background: #0a0a0a;
+      background: var(--navy);
       font-family: 'Roboto', sans-serif;
-      color: #fff;
+      color: var(--white);
       padding: 40px 20px;
     }
 
@@ -18,23 +24,29 @@
       display: inline-block;
       margin-bottom: 20px;
       font-size: 1.2em;
-      color: gold;
+      color: var(--red);
       text-decoration: none;
       padding-left: 10px;
       transition: all 0.3s ease;
+      border: 2px solid transparent;
+      border-radius: 6px;
     }
 
     a.back-link:hover {
       padding-left: 20px;
-      color: #ffd700;
+      background-color: var(--white);
+      color: var(--navy);
+      border-color: var(--white);
     }
 
     h1 {
       text-align: center;
       font-family: 'Playfair Display', serif;
-      color: gold;
+      color: var(--red);
       font-size: 3em;
-      text-shadow: 0 0 12px gold;
+      text-shadow: 0 0 12px var(--white);
+      border-bottom: 3px solid var(--white);
+      padding-bottom: 10px;
     }
 
     p {
@@ -43,7 +55,7 @@
       font-size: 1.2em;
       text-align: center;
       line-height: 1.6;
-      color: #ddd;
+      color: var(--white);
     }
 
     .image-container {
@@ -53,9 +65,10 @@
 
     .image-container img {
       max-width: 100%;
-      border: 3px solid gold;
+      border: 3px solid var(--white);
       border-radius: 12px;
-      box-shadow: 0 0 25px gold;
+      box-shadow: 0 0 25px var(--red);
+      background-color: #081a2e;
     }
   </style>
 </head>
