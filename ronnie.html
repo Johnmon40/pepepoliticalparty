@@ -24,10 +24,7 @@
       color:var(--white);
     }
 
-    /* Your existing global header remains used on index only.
-       We avoid it here by using an h1 for the page title. */
-
-    /* Desktop Sidebar (same as current index) */
+    /* Desktop Sidebar (same as index, with stacking fix) */
     #sidebar{
       background-color:var(--navy);
       width:250px;
@@ -37,6 +34,7 @@
       top:0; left:0;
       border-right:3px solid var(--red);
       padding-top:20px;
+      z-index:1000; /* keep on top */
     }
     #sidebar h2{
       color:var(--white);
@@ -57,7 +55,7 @@
     /* Main content area */
     .content{ margin-left:250px; padding:20px; }
 
-    /* Top site banner image */
+    /* Banner (same as index) */
     .banner{
       width:100%;
       max-width:100%;
@@ -67,7 +65,7 @@
       margin-bottom:30px;
     }
 
-    /* Page title (avoid <header> clash) */
+    /* Page title (use h1 to avoid global header styles) */
     h1.ronnie-title{
       background-color:var(--navy);
       color:var(--white);
@@ -127,7 +125,7 @@
     }
     .back-btn:hover{ filter:brightness(0.95); }
 
-    /* Mobile nav (same as index) */
+    /* Mobile nav */
     .mobile-nav-toggle{
       display:none;
       background-color:var(--red);
@@ -139,7 +137,7 @@
       text-align:left;
       position:sticky;
       top:0;
-      z-index:1000;
+      z-index:1001;
     }
     .mobile-menu{
       display:none;
@@ -237,15 +235,15 @@
   </div>
 
   <div class="content">
-    <!-- Keep your site-wide banner on top -->
-    <img src="images/banner.jpg" alt="Banner" class="banner">
+    <!-- Site-wide banner -->
+    <img src="images/banner.jpg" alt="PPP banner" class="banner">
 
-    <!-- Page title (uses h1 instead of header to avoid global header styles) -->
+    <!-- Title -->
     <h1 class="ronnie-title">RONNIE — PPP's MOST WANTED</h1>
 
     <!-- Ronnie images in a line before the text -->
     <div class="ronnie-row" aria-label="Ronnie photo strip">
-      <!-- If your images are in /images/, change each src to images/ronnie1.jpg, etc. -->
+      <!-- If images are in /images/, change to images/ronnie1.jpg, etc. -->
       <img src="ronnie1.jpg" alt="Ronnie image 1">
       <img src="ronnie2.jpg" alt="Ronnie image 2">
       <img src="ronnie3.jpg" alt="Ronnie image 3">
@@ -266,5 +264,23 @@
     <a class="back-btn" href="index.html">← Back to Main Menu</a>
   </div>
 
+  <!-- Safety net: auto-insert the Ronnie link if missing on any page -->
+  <script>
+    (function(){
+      function ensureLink(menuId){
+        const menu=document.getElementById(menuId);
+        if(!menu) return;
+        const present=[...menu.querySelectorAll('a')].some(a => (a.getAttribute('href')||'')==='ronnie.html');
+        if(present) return;
+        const a=document.createElement('a');
+        a.href='ronnie.html';
+        a.textContent='Ronnie: Most Wanted';
+        const after=menu.querySelector('a[href="origins.html"]') || menu.lastElementChild;
+        if(after) after.insertAdjacentElement('afterend', a); else menu.appendChild(a);
+      }
+      ensureLink('sidebar');
+      ensureLink('mobileMenu');
+    })();
+  </script>
 </body>
 </html>
