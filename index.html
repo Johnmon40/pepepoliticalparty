@@ -26,18 +26,6 @@
       color:var(--white);
     }
 
-    header{
-      background-color:var(--navy);
-      color:var(--white);
-      text-align:center;
-      padding:30px 20px;
-      font-family:'Playfair Display',serif;
-      font-size:2.5em;
-      letter-spacing:2px;
-      font-weight:bold;
-      border-bottom:4px solid var(--red);
-    }
-
     /* Desktop sidebar */
     #sidebar{
       background-color:var(--navy);
@@ -48,6 +36,7 @@
       top:0; left:0;
       border-right:3px solid var(--red);
       padding-top:20px;
+      z-index:10;
     }
     #sidebar h2{
       color:var(--white);
@@ -70,17 +59,34 @@
       margin-left:250px;
       padding:20px;
       min-height:100vh;
+      position:relative;
+      z-index:0;
     }
+
+    header.page-title{
+      background-color:var(--navy);
+      color:var(--white);
+      text-align:center;
+      padding:30px 20px;
+      font-family:'Playfair Display',serif;
+      font-size:2.5em;
+      letter-spacing:2px;
+      font-weight:bold;
+      border-bottom:4px solid var(--red);
+      margin-bottom:20px;
+    }
+
     .banner{
       width:100%;
       max-width:100%;
       height:auto;
       display:block;
       border-bottom:4px solid var(--red);
-      margin-bottom:30px;
-      background:#081a2e;
+      margin:0 0 30px 0;
+      background:#081a2e; /* graceful fallback */
       border-radius:4px;
     }
+
     .gallery{
       display:grid;
       grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
@@ -120,7 +126,6 @@
     }
     .mobile-menu a:hover{ background-color:var(--navy-2); }
 
-    /* Responsive */
     @media (max-width:768px){
       #sidebar{ display:none; }
       .mobile-nav-toggle{ display:block; }
@@ -201,11 +206,13 @@
   </nav>
 
   <main class="content">
-    <!-- All assets live in /images -->
+    <!-- Title FIRST so you always see something even if images fail -->
+    <header class="page-title">Pepe Political Party - $PPP</header>
+
+    <!-- Banner -->
     <img src="images/banner.jpg" alt="PPP Banner" class="banner">
 
-    <header>Pepe Political Party - $PPP</header>
-
+    <!-- 1–10 gallery -->
     <section class="gallery" aria-label="Image gallery">
       <img src="images/image-1.jpg" alt="Gallery Image 1">
       <img src="images/image-2.jpg" alt="Gallery Image 2">
