@@ -24,21 +24,10 @@
       color:var(--white);
     }
 
-    /* Page header bar (kept for consistency) */
-    header.page-title{
-      background-color:var(--navy);
-      color:var(--white);
-      text-align:center;
-      padding:30px 20px;
-      font-family:'Playfair Display',serif;
-      font-size:2.2em;
-      letter-spacing:2px;
-      font-weight:bold;
-      border-top:4px solid var(--navy);
-      border-bottom:4px solid var(--red);
-    }
+    /* Your existing global header remains used on index only.
+       We avoid it here by using an h1 for the page title. */
 
-    /* Desktop Sidebar */
+    /* Desktop Sidebar (same as current index) */
     #sidebar{
       background-color:var(--navy);
       width:250px;
@@ -76,6 +65,21 @@
       display:block;
       border-bottom:4px solid var(--red);
       margin-bottom:30px;
+    }
+
+    /* Page title (avoid <header> clash) */
+    h1.ronnie-title{
+      background-color:var(--navy);
+      color:var(--white);
+      text-align:center;
+      padding:30px 20px;
+      font-family:'Playfair Display',serif;
+      font-size:2.2em;
+      letter-spacing:2px;
+      font-weight:bold;
+      border-top:4px solid var(--navy);
+      border-bottom:4px solid var(--red);
+      margin-bottom:16px;
     }
 
     /* Ronnie image strip */
@@ -123,7 +127,7 @@
     }
     .back-btn:hover{ filter:brightness(0.95); }
 
-    /* Mobile nav */
+    /* Mobile nav (same as index) */
     .mobile-nav-toggle{
       display:none;
       background-color:var(--red);
@@ -195,6 +199,7 @@
     <a href="interns.html">White House Interns</a>
     <a href="origins.html">Origins</a>
     <a href="endorsements.html">Endorsements</a>
+    <a href="ronnie.html">Ronnie: Most Wanted</a>
     <a href="shop.html">🛒 Shop</a>
     <a href="buy.html">Buy Now</a>
   </div>
@@ -226,6 +231,7 @@
     <a href="interns.html">White House Interns</a>
     <a href="origins.html">Origins</a>
     <a href="endorsements.html">Endorsements</a>
+    <a href="ronnie.html">Ronnie: Most Wanted</a>
     <a href="shop.html">🛒 Shop</a>
     <a href="buy.html">Buy Now</a>
   </div>
@@ -234,11 +240,12 @@
     <!-- Keep your site-wide banner on top -->
     <img src="images/banner.jpg" alt="Banner" class="banner">
 
-    <!-- Page header -->
-    <header class="page-title">RONNIE — PPP's MOST WANTED</header>
+    <!-- Page title (uses h1 instead of header to avoid global header styles) -->
+    <h1 class="ronnie-title">RONNIE — PPP's MOST WANTED</h1>
 
     <!-- Ronnie images in a line before the text -->
     <div class="ronnie-row" aria-label="Ronnie photo strip">
+      <!-- If your images are in /images/, change each src to images/ronnie1.jpg, etc. -->
       <img src="ronnie1.jpg" alt="Ronnie image 1">
       <img src="ronnie2.jpg" alt="Ronnie image 2">
       <img src="ronnie3.jpg" alt="Ronnie image 3">
