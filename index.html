@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <title>Pepe Political Party - $PPP</title>
 
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto&display=swap" rel="stylesheet">
@@ -12,14 +13,16 @@
   <style>
     :root{ --navy:#0c223b; --navy-2:#102a48; --red:#d1292f; --white:#fff; }
     *{ box-sizing:border-box; margin:0; padding:0; }
+    html,body{ height:100%; }
     body{ font-family:'Roboto',sans-serif; background:var(--navy); color:var(--white); }
 
     /* Sidebar */
     #sidebar{
-      position:fixed; inset:0 auto 0 0; width:250px; background:var(--navy);
-      border-right:3px solid var(--red); padding-top:20px; overflow-y:auto;
+      position:fixed; top:0; left:0; bottom:0; width:250px;
+      background:var(--navy); border-right:3px solid var(--red);
+      padding-top:20px; overflow-y:auto;
     }
-    #sidebar h2{ text-align:center; font:700 1.5em 'Playfair Display',serif; color:var(--white); margin-bottom:10px; }
+    #sidebar h2{ text-align:center; font:700 1.5em 'Playfair Display',serif; margin-bottom:10px; }
     #sidebar a{ display:block; color:var(--white); text-decoration:none; padding:12px 20px;
       border-bottom:1px solid rgba(255,255,255,.12); }
     #sidebar a:hover{ background:var(--navy-2); }
@@ -30,14 +33,17 @@
       text-align:center; font:700 2.5em 'Playfair Display',serif; letter-spacing:2px;
       padding:30px 20px; border-bottom:4px solid var(--red); margin-bottom:20px;
     }
-    .banner{ width:100%; display:block; margin:0 0 30px 0; border-bottom:4px solid var(--red); background:#081a2e; border-radius:4px; }
+    .banner{ width:100%; display:block; margin:0 0 30px 0;
+      border-bottom:4px solid var(--red); background:#081a2e; border-radius:4px; }
     .gallery{ display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:20px; }
     .gallery img{ width:100%; display:block; border:3px solid var(--white); border-radius:10px; background:#081a2e; }
 
     /* Mobile */
-    .mobile-nav-toggle{ display:none; width:100%; background:var(--red); color:var(--white); border:0; font-size:1.5em; padding:10px 20px; }
+    .mobile-nav-toggle{ display:none; width:100%; background:var(--red); color:var(--white);
+      border:0; font-size:1.5em; padding:10px 20px; }
     .mobile-menu{ display:none; background:var(--navy); border-top:3px solid var(--red); }
-    .mobile-menu a{ display:block; color:var(--white); text-decoration:none; padding:12px 20px; border-bottom:1px solid rgba(255,255,255,.12); }
+    .mobile-menu a{ display:block; color:var(--white); text-decoration:none; padding:12px 20px;
+      border-bottom:1px solid rgba(255,255,255,.12); }
     .mobile-menu a:hover{ background:var(--navy-2); }
 
     @media (max-width:768px){
@@ -53,10 +59,21 @@
       const m=document.getElementById('mobileMenu');
       m.style.display = (m.style.display==='block')?'none':'block';
     }
-    // Show a visible placeholder if an image can't load (prevents “blank” feel)
-    function addImgFallback(img){
+    // Inline SVG placeholder for any image that fails (prevents "blank" look)
+    function fallbackSVG(label){
+      const svg = `<svg xmlns='http://www.w3.org/2000/svg' width='1200' height='675'>
+        <rect width='100%' height='100%' fill='#102a48'/>
+        <text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle'
+              font-family='Arial, sans-serif' font-size='36' fill='#ffffff'>
+          Missing: ${label}
+        </text>
+      </svg>`;
+      return 'data:image/svg+xml;utf8,' + encodeURIComponent(svg);
+    }
+    function imgFallback(img,label){
+      img.onerror=null;
+      img.src = fallbackSVG(label||img.alt||'image');
       img.style.outline='2px dashed #ff9aa2';
-      img.alt = (img.alt||'Image') + ' (missing: '+ img.src +')';
     }
   </script>
 </head>
@@ -96,7 +113,6 @@
   <!-- Mobile menu -->
   <button class="mobile-nav-toggle" onclick="toggleMobileMenu()">☰ Menu</button>
   <nav id="mobileMenu" class="mobile-menu" aria-label="Mobile Site">
-    <!-- same links as sidebar -->
     <a href="index.html">$PPP</a>
     <a href="president.html">President Pepe</a>
     <a href="vicepresident.html">Vice President Vibeshift</a>
@@ -127,24 +143,25 @@
 
   <!-- Main -->
   <main class="content">
-    <!-- Title first so page never looks empty -->
-    <div class="page-title">Pepe Political Party - $PPP</div>
+    <!-- Title first so you always see something -->
+    <h1 class="page-title">Pepe Political Party - $PPP</h1>
 
-    <!-- Banner (exact path from your repo) -->
-    <img src="images/banner.jpg" class="banner" alt="PPP Banner" onerror="addImgFallback(this)">
+    <!-- Banner (cache-busted) -->
+    <img src="images/banner.jpg?v=PPP_1" class="banner" alt="PPP Banner"
+         onerror="imgFallback(this,'images/banner.jpg')">
 
-    <!-- Gallery 1–10 (exact filenames from your repo) -->
+    <!-- Gallery 1–10 (cache-busted + fallback) -->
     <section class="gallery" aria-label="Image gallery">
-      <img src="images/image-1.jpg" alt="Gallery Image 1" onerror="addImgFallback(this)">
-      <img src="images/image-2.jpg" alt="Gallery Image 2" onerror="addImgFallback(this)">
-      <img src="images/image-3.jpg" alt="Gallery Image 3" onerror="addImgFallback(this)">
-      <img src="images/image-4.jpg" alt="Gallery Image 4" onerror="addImgFallback(this)">
-      <img src="images/image-5.jpg" alt="Gallery Image 5" onerror="addImgFallback(this)">
-      <img src="images/image-6.jpg" alt="Gallery Image 6" onerror="addImgFallback(this)">
-      <img src="images/image-7.jpg" alt="Gallery Image 7" onerror="addImgFallback(this)">
-      <img src="images/image-8.jpg" alt="Gallery Image 8" onerror="addImgFallback(this)">
-      <img src="images/image-9.jpg" alt="Gallery Image 9" onerror="addImgFallback(this)">
-      <img src="images/image-10.jpg" alt="Gallery Image 10" onerror="addImgFallback(this)">
+     <img src="images/image-1.jpg" alt="Gallery Image 1">
+<img src="images/image-2.jpg" alt="Gallery Image 2">
+<img src="images/image-3.jpg" alt="Gallery Image 3">
+<img src="images/image-4.jpg" alt="Gallery Image 4">
+<img src="images/image-5.jpg" alt="Gallery Image 5">
+<img src="images/image-6.jpg" alt="Gallery Image 6">
+<img src="images/image-7.jpg" alt="Gallery Image 7">
+<img src="images/image-8.jpg" alt="Gallery Image 8">
+<img src="images/image-9.jpg" alt="Gallery Image 9">
+<img src="images/image-10.jpg" alt="Gallery Image 10">
     </section>
   </main>
 
