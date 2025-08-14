@@ -1,88 +1,157 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Endorsements - Pepe Political Party</title>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Pepe Political Party - $PPP</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto&display=swap" rel="stylesheet">
-<style>
-  :root {
-    --navy: #0c223b;
-    --navy-2: #102a48;
-    --red: #d1292f;
-    --white: #ffffff;
-  }
 
-  body {
-    background-color: var(--navy);
-    color: var(--white);
-    font-family: 'Roboto', sans-serif;
-    margin: 0;
-    padding: 0;
-  }
+  <style>
+    :root { --navy:#0c223b; --navy-2:#102a48; --red:#d1292f; --white:#ffffff; }
+    * { box-sizing:border-box; margin:0; padding:0; }
+    body { font-family:'Roboto',sans-serif; background:var(--navy); color:var(--white); }
 
-  header {
-    background-color: var(--navy);
-    color: var(--white);
-    text-align: center;
-    padding: 30px 20px;
-    font-family: 'Playfair Display', serif;
-    font-size: 2.2em;
-    font-weight: bold;
-    border-bottom: 4px solid var(--red);
-  }
+    /* Sidebar */
+    #sidebar{
+      position:fixed; inset:0 auto 0 0; width:250px;
+      background:var(--navy); border-right:3px solid var(--red);
+      padding-top:20px; overflow-y:auto;
+    }
+    #sidebar h2{ text-align:center; font:700 1.5em 'Playfair Display',serif; margin-bottom:10px; }
+    #sidebar a{
+      display:block; color:var(--white); text-decoration:none; padding:12px 20px;
+      border-bottom:1px solid rgba(255,255,255,.12);
+    }
+    #sidebar a:hover{ background:var(--navy-2); }
 
-  .content {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    padding: 30px;
-    max-width: 1200px;
-    margin: auto;
-  }
+    /* Main */
+    .content{ margin-left:250px; padding:20px; min-height:100vh; }
+    header.page-title{
+      text-align:center; font:700 2.5em 'Playfair Display',serif; letter-spacing:2px;
+      padding:30px 20px; border-bottom:4px solid var(--red); margin-bottom:20px;
+    }
+    .banner{
+      width:100%; display:block; margin:0 0 30px 0;
+      border-bottom:4px solid var(--red); background:#081a2e; border-radius:4px;
+    }
+    .gallery{ display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:20px; }
+    .gallery img{ width:100%; display:block; border:3px solid var(--white); border-radius:10px; background:#081a2e; }
 
-  .content img {
-    width: 300px;
-    height: auto;
-    border-radius: 12px;
-    border: 3px solid var(--white);
-    background: #081a2e;
-  }
+    /* Mobile */
+    .mobile-nav-toggle{ display:none; width:100%; background:var(--red); color:var(--white);
+      border:0; font-size:1.5em; padding:10px 20px; }
+    .mobile-menu{ display:none; background:var(--navy); border-top:3px solid var(--red); }
+    .mobile-menu a{
+      display:block; color:var(--white); text-decoration:none; padding:12px 20px;
+      border-bottom:1px solid rgba(255,255,255,.12);
+    }
+    .mobile-menu a:hover{ background:var(--navy-2); }
 
-  .back-button {
-    margin: 40px auto;
-    display: block;
-    padding: 12px 20px;
-    background-color: var(--red);
-    color: var(--white);
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 8px;
-    width: fit-content;
-  }
+    @media (max-width:768px){
+      #sidebar{ display:none; }
+      .mobile-nav-toggle{ display:block; }
+      .content{ margin-left:0; padding:15px; }
+      .banner{ margin-top:10px; }
+    }
+  </style>
 
-  .back-button:hover {
-    background-color: var(--navy-2);
-  }
-</style>
-
+  <script>
+    function toggleMobileMenu(){
+      const m=document.getElementById('mobileMenu');
+      m.style.display = (m.style.display==='block') ? 'none' : 'block';
+    }
+  </script>
 </head>
 <body>
-  <header>Endorsements</header>
-  <div class="content">
-    <img src="images/endorsement1.jpg" alt="Endorsement 1">
-    <img src="images/endorsement2.jpg" alt="Endorsement 2">
-    <img src="images/endorsement3.jpg" alt="Endorsement 3">
-    <img src="images/endorsement5.jpg" alt="Endorsement 5">
-    <img src="images/endorsement6.jpg" alt="Endorsement 6">
-    <img src="images/endorsement7.jpg" alt="Endorsement 7">
-    <img src="images/endorsement8.jpg" alt="Endorsement 8">
-    <img src="images/endorsement9.jpg" alt="Endorsement 9">
-    <!-- Add more <img> lines here as you create more endorsements -->
-  </div>
 
-  <a href="index.html" class="back-button">← Back to Main Menu</a>
+  <!-- Desktop Sidebar -->
+  <nav id="sidebar" aria-label="Site">
+    <h2>Pepe Political Party</h2>
+    <a href="index.html">$PPP</a>
+    <a href="president.html">President Pepe</a>
+    <a href="vicepresident.html">Vice President Vibeshift</a>
+    <a href="firstlady.html">First Lady</a>
+    <a href="wuhan.html">Secretary of State</a>
+    <a href="attorneygeneral.html">Attorney General</a>
+    <a href="presssecretary.html">Press Secretary</a>
+    <a href="rex.html">Minister of Armaments</a>
+    <a href="rekt.html">Chair of the Federal Reserve</a>
+    <a href="education.html">Secretary of Education</a>
+    <a href="chiefofstaff.html">Chief of Staff</a>
+    <a href="coordination.html">Coordination Advisor</a>
+    <a href="chiefusher.html">Chief Usher of White House</a>
+    <a href="ministerofhealth.html">Minister of Health</a>
+    <a href="russia.html">Ambassador of Russia</a>
+    <a href="mexico.html">Ambassador of Mexico</a>
+    <a href="nsa.html">NSA Director</a>
+    <a href="hud.html">Secretary of HUD</a>
+    <a href="wif.html">Secretary of Rugs</a>
+    <a href="livestock.html">Director of Agriculture & Livestock</a>
+    <a href="transgenders.html">Department of Transgenders</a>
+    <a href="interns.html">White House Interns</a>
+    <a href="origins.html">Origins</a>
+    <a href="endorsements.html">Endorsements</a>
+    <a href="shop.html">🛒 Shop</a>
+    <!-- Buy Now goes to a page with your two links exactly as before -->
+    <a href="buy.html">💰 Buy Now</a>
+  </nav>
 
+  <!-- Mobile menu -->
+  <button class="mobile-nav-toggle" onclick="toggleMobileMenu()">☰ Menu</button>
+  <nav id="mobileMenu" class="mobile-menu" aria-label="Mobile Site">
+    <a href="index.html">$PPP</a>
+    <a href="president.html">President Pepe</a>
+    <a href="vicepresident.html">Vice President Vibeshift</a>
+    <a href="firstlady.html">First Lady</a>
+    <a href="wuhan.html">Secretary of State</a>
+    <a href="attorneygeneral.html">Attorney General</a>
+    <a href="presssecretary.html">Press Secretary</a>
+    <a href="rex.html">Minister of Armaments</a>
+    <a href="rekt.html">Chair of the Federal Reserve</a>
+    <a href="education.html">Secretary of Education</a>
+    <a href="chiefofstaff.html">Chief of Staff</a>
+    <a href="coordination.html">Coordination Advisor</a>
+    <a href="chiefusher.html">Chief Usher of White House</a>
+    <a href="ministerofhealth.html">Minister of Health</a>
+    <a href="russia.html">Ambassador of Russia</a>
+    <a href="mexico.html">Ambassador of Mexico</a>
+    <a href="nsa.html">NSA Director</a>
+    <a href="hud.html">Secretary of HUD</a>
+    <a href="wif.html">Secretary of Rugs</a>
+    <a href="livestock.html">Director of Agriculture & Livestock</a>
+    <a href="transgenders.html">Department of Transgenders</a>
+    <a href="interns.html">White House Interns</a>
+    <a href="origins.html">Origins</a>
+    <a href="endorsements.html">Endorsements</a>
+    <a href="shop.html">🛒 Shop</a>
+    <a href="buy.html">💰 Buy Now</a>
+  </nav>
+
+  <!-- Main -->
+  <main class="content">
+    <!-- Title (always visible) -->
+    <header class="page-title">Pepe Political Party - $PPP</header>
+
+    <!-- Banner -->
+    <img src="images/banner.jpg" alt="PPP Banner" class="banner">
+
+    <!-- Gallery 1–10 -->
+    <section class="gallery" aria-label="Image gallery">
+      <img src="images/image-1.jpg"  alt="Gallery Image 1">
+      <img src="images/image-2.jpg"  alt="Gallery Image 2">
+      <img src="images/image-3.jpg"  alt="Gallery Image 3">
+      <img src="images/image-4.jpg"  alt="Gallery Image 4">
+      <img src="images/image-5.jpg"  alt="Gallery Image 5">
+      <img src="images/image-6.jpg"  alt="Gallery Image 6">
+      <img src="images/image-7.jpg"  alt="Gallery Image 7">
+      <img src="images/image-8.jpg"  alt="Gallery Image 8">
+      <img src="images/image-9.jpg"  alt="Gallery Image 9">
+      <img src="images/image-10.jpg" alt="Gallery Image 10">
+    </section>
+  </main>
 </body>
 </html>
